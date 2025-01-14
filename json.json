@@ -12,6 +12,10 @@
         "interchangeControlReference": "TS3195125",
         "password": "123456",
         "applicationReference": "ORDERS",
-        "acknowledgementRequest": 1212
+        "acknowledgementRequest": 1
+    },
+    "interchangeTrailer": {
+        "interchangeControl": 123456,
+        "interchangeReference": "TS3195125"
     }
 }

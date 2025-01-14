@@ -1,0 +1,6 @@
+-- Cuando el campo es obligatorio se pone valor maximo y minimo.
+-- Cuando el campo no es obligatorio solo se pone maximo.
+-- Cuando el campo tiene enum tener en cuenta los valores para poner el valor maximo y minimo.
+-- El campo de description es obligatorio y se saca de las columnas : Seg., Elem, Sube.
+-- La expresion regular de texto es A = "^[a-zA-Z]+$" y para alfanumero es AN = "^[a-zA-Z0-9]*$".
+-- Para los campos numero los valores maximo y minimo se validan con  "minimum": 0, "maximum": 0.

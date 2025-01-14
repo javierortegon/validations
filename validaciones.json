@@ -1,5 +1,10 @@
 {
-    "interchangeHeader": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "ORDERS",
+    "description": "Scheme validation orders standard",
+    "type": "object",
+    "properties": {
+        "interchangeHeader": {
             "required": [
                 "syntaxIdentifier",
                 "syntaxVersionNumber",
@@ -114,9 +119,31 @@
                 },
                 "acknowledgementRequest": {
                     "type": "number",
-                    "description": "UNB_0031"
+                    "description": "UNB_0031",
+                    "minimum": 0,
+                    "maximum": 9
+                }
+            }
+        },
+        "interchangeTrailer": {
+            "required": [
+                "interchangeControl",
+                "interchangeReference"
+            ],
+            "properties": {
+                "interchangeControl": {
+                    "description": "UNZ_36",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 999999
+                },
+                "interchangeReference": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 14,
+                    "description": "UNZ_20"
                 }
             }
         }
- 
+    }
 }
