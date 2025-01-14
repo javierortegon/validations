@@ -1,21 +1,117 @@
 {
     "interchangeHeader": {
-        "syntaxIdentifier": "UNOA",
-        "syntaxVersionNumber": 2,
-        "senderIdentification": "7701008100015",
-        "partnerIdentificationCodeQualifier": "14",
-        "recipientIdentification": "7702398000015",
-        "recipientIdentificationCodeQualifier": "14",
-        "recipientIdentificationCodeCountry": "CO",
-        "date": "240307",
-        "time": "1128",
-        "interchangeControlReference": "TS3195125",
-        "password": "123456",
-        "applicationReference": "ORDERS",
-        "acknowledgementRequest": 1
+      "syntaxIdentifier": "UNOA",
+      "syntaxVersionNumber": 2,
+      "senderIdentification": "7701008100015",
+      "partnerIdentificationCodeQualifier": "14",
+      "recipientIdentification": "7702398000015",
+      "recipientIdentificationCodeQualifier": "14",
+      "recipientIdentificationCodeCountry": "CO",
+      "date": "240307",
+      "time": "1128",
+      "interchangeControlReference": "TS3195125",
+      "password": "123456",
+      "applicationReference": "ORDERS",
+      "acknowledgementRequest": 1
     },
     "interchangeTrailer": {
-        "interchangeControl": 123456,
-        "interchangeReference": "TS3195125"
-    }
-}
+      "interchangeControl": 123456,
+      "interchangeReference": "TS3195125"
+    },
+    "orders": [
+      {
+        "detailsItem": [
+          {
+            "actionNotification": "123",
+            "additionalItemType2": "IZ",
+            "additionalItemType3": "IZ",
+            "additionalItemType4": "IZ",
+            "additionalItemType5": "IZ",
+            "additionalProductId": [
+              {
+                "productIdFunction": "1",
+                "additionalItemType": "AT",
+                "additionalItemNumber": "1151090"
+              },
+              {
+                "productIdFunction": "1",
+                "additionalItemType": "AT",
+                "additionalItemNumber": "8825",
+                "additionalItemNumber2": "8825",
+                "additionalItemNumber3": "8825",
+                "additionalItemNumber4": "8825",
+                "additionalItemNumber5": "8825"
+              },
+              {
+                "productIdFunction": "2",
+                "additionalItemType": "IN",
+                "additionalItemNumber": "48451",
+                "codeList": "92",
+                "codeList2": "9"
+              },
+              {
+                "productIdFunction": "1",
+                "additionalItemType": "GB",
+                "additionalItemNumber": "89153"
+              },
+              {
+                "productIdFunction": "1",
+                "additionalItemType": "AT",
+                "additionalItemNumber": "99999"
+              }
+            ],
+            "allowanceOrChargeDetails": [
+              {
+                "settlementCoded": "1",
+                "codeLlistCoded": "EAB",
+                "specialServicesCoded": "",
+                "specialServiceDescription2" : "22",
+                "allowanceOrChargeNumber": "2",
+                "allowanceOrChargeDescription": "1",
+                "allowanceOrChargeQualifier": "A",
+                "calculationSequenceIndicator": "1",
+                "detailsItemQuantityAllowance": [
+                  {
+                    "quantity": 123456789101112.13,
+                    "quantityQualifier": "2",
+                    "quantityUnitCode": "12"
+                  }
+                ],
+                "detailsMonetaryAllowance": [
+                  {
+                    "allowanceMonetaryAmount": "012",
+                    "monetaryAmountPercentaje": 123456789101112
+                  }
+                ],
+                "detailsPercentageAllowance": [
+                  {
+                    "percentageQualifier": "001",
+                    "percentageValueDetailsAllowance": 123456789101112.13,
+                    "rangeAllowance": [
+                      {
+                        "measureUnitQualifier": "CEL",
+                        "rangeMaximumPercentaje": 123456789101112.13,
+                        "rangeMinimumPercentaje": 123456789101112.13,
+                        "rangeType": "1"
+                      }
+                    ]
+                  }
+                ],
+                "rateDetails": [
+                  {
+                    "ratePerUnit": 12345678910.908,
+                    "rateTypeQualifier": "1"
+                  }
+                ],
+                "specialServiceDescription": "Special Service",
+                "specialServiceDescription2": ""
+              }
+            ],
+            "codeList": "90",
+            "codeListAgency": "9",
+            "configurationCoded": "12"
+          }
+        ]
+      }
+    ]
+  }

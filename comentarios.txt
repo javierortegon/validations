@@ -4,3 +4,6 @@
 -- El campo de description es obligatorio y se saca de las columnas : Seg., Elem, Sube.
 -- La expresion regular de texto es A = "^[a-zA-Z]+$" y para alfanumero es AN = "^[a-zA-Z0-9]*$".
 -- Para los campos numero los valores maximo y minimo se validan con  "minimum": 0, "maximum": 0.
+-- Para los campos de texto largos no poner expresion regular.
+-- Para los campos opcionales se debe garantizar que reciba vacio, si es un enum debe tener "" y no puede llevar la expresion regular.
+-- Para los campos opcionales que no llevan enum se debe usar la expresion regular "^[a-zA-Z0-9]*$".

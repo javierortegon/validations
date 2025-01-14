@@ -4,146 +4,759 @@
     "description": "Scheme validation orders standard",
     "type": "object",
     "properties": {
-        "interchangeHeader": {
-            "required": [
-                "syntaxIdentifier",
-                "syntaxVersionNumber",
-                "senderIdentification",
-                "partnerIdentificationCodeQualifier",
-                "recipientIdentification",
-                "recipientIdentificationCodeQualifier",
-                "date",
-                "time",
-                "interchangeControlReference",
-                "password"
-            ],
-            "properties": {
-                "syntaxIdentifier": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z]+$",
-                    "minLength": 4,
-                    "maxLength": 4,
-                    "description": "UNB_S001_1",
-                    "enum": [
-                        "UNOA",
-                        "UNOB",
-                        "UNOC"
-                    ]
-                },
-                "syntaxVersionNumber": {
-                    "type": "number",
-                    "description": "UNB_S001_2",
-                    "enum": [
-                        2,
-                        3
-                    ]
-                },
-                "senderIdentification": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 35,
-                    "description": "UNB_S002_4"
-                },
-                "partnerIdentificationCodeQualifier": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 4,
-                    "description": "UNB_S002_7",
-                    "enum": [
-                        "14"
-                    ]
-                },
-                "recipientIdentification": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 35,
-                    "description": "UNB_S003_10"
-                },
-                "recipientIdentificationCodeQualifier": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 35,
-                    "description": "UNB_S003_7",
-                    "enum": [
-                        "14"
-                    ]
-                },
-                "recipientIdentificationCodeCountry": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 3,
-                    "description": "UNB_S003"
-                },
-                "date": {
-                    "type": "string",
-                    "pattern": "^[0-9]{6}$",
-                    "minLength": 6,
-                    "maxLength": 6,
-                    "description": "UNB_S004_17"
-                },
-                "time": {
-                    "type": "string",
-                    "pattern": "^[0-9]{4}$",
-                    "minLength": 4,
-                    "maxLength": 4,
-                    "description": "UNB_S004_19"
-                },
-                "interchangeControlReference": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 14,
-                    "description": "UNB_20"
-                },
-                "password": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 14,
-                    "description": "UNB_S005_22"
-                },
-                "applicationReference": {
-                    "type": "string",
-                    "pattern": "^[a-zA-Z0-9]+$",
-                    "minLength": 1,
-                    "maxLength": 14,
-                    "description": "UNB_26",
-                    "enum": [
-                        "ORDERS"
-                    ]
-                },
-                "acknowledgementRequest": {
-                    "type": "number",
-                    "description": "UNB_0031",
-                    "minimum": 0,
-                    "maximum": 9
-                }
-            }
-        },
-        "interchangeTrailer": {
-            "required": [
-                "interchangeControl",
-                "interchangeReference"
-            ],
-            "properties": {
-                "interchangeControl": {
-                    "description": "UNZ_36",
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 999999
-                },
-                "interchangeReference": {
-                    "type": "string",
-                    "minLength": 1,
-                    "maxLength": 14,
-                    "description": "UNZ_20"
-                }
-            }
+      "interchangeHeader": {
+        "required": [
+          "syntaxIdentifier",
+          "syntaxVersionNumber",
+          "senderIdentification",
+          "partnerIdentificationCodeQualifier",
+          "recipientIdentification",
+          "recipientIdentificationCodeQualifier",
+          "date",
+          "time",
+          "interchangeControlReference",
+          "password"
+        ],
+        "properties": {
+          "syntaxIdentifier": {
+            "type": "string",
+            "pattern": "^[a-zA-Z]+$",
+            "minLength": 4,
+            "maxLength": 4,
+            "description": "UNB_S001_1",
+            "enum": [
+              "UNOA",
+              "UNOB",
+              "UNOC"
+            ]
+          },
+          "syntaxVersionNumber": {
+            "type": "number",
+            "description": "UNB_S001_2",
+            "enum": [
+              2,
+              3
+            ]
+          },
+          "senderIdentification": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 35,
+            "description": "UNB_S002_4"
+          },
+          "partnerIdentificationCodeQualifier": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 4,
+            "description": "UNB_S002_7",
+            "enum": [
+              "14"
+            ]
+          },
+          "recipientIdentification": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 35,
+            "description": "UNB_S003_10"
+          },
+          "recipientIdentificationCodeQualifier": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 35,
+            "description": "UNB_S003_7",
+            "enum": [
+              "14"
+            ]
+          },
+          "recipientIdentificationCodeCountry": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 3,
+            "description": "UNB_S003"
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^[0-9]{6}$",
+            "minLength": 6,
+            "maxLength": 6,
+            "description": "UNB_S004_17"
+          },
+          "time": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$",
+            "minLength": 4,
+            "maxLength": 4,
+            "description": "UNB_S004_19"
+          },
+          "interchangeControlReference": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 14,
+            "description": "UNB_20"
+          },
+          "password": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 14,
+            "description": "UNB_S005_22"
+          },
+          "applicationReference": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "minLength": 1,
+            "maxLength": 14,
+            "description": "UNB_26",
+            "enum": [
+              "ORDERS"
+            ]
+          },
+          "acknowledgementRequest": {
+            "type": "number",
+            "description": "UNB_0031",
+            "minimum": 0,
+            "maximum": 9
+          }
         }
+      },
+      "interchangeTrailer": {
+        "required": [
+          "interchangeControl",
+          "interchangeReference"
+        ],
+        "properties": {
+          "interchangeControl": {
+            "description": "UNZ_36",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999
+          },
+          "interchangeReference": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 14,
+            "description": "UNZ_20"
+          }
+        }
+      },
+      "orders": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "detailsItem": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "actionNotification": {
+                    "type": "string",
+                    "maxLength": 3,
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "description": "LIN_1229"
+                  },
+                  "additionalItemType2": {
+                    "type": "string",
+                    "enum": [
+                      "IN",
+                      "SA",
+                      "MN",
+                      "IZ",
+                      "CL",
+                      "VN",
+                      "ST",
+                      "EN",
+                      "SK",
+                      "ZZZ",
+                      "GB",
+                      "CV",
+                      "EF",
+                      "BO",
+                      "BP",
+                      "AM",
+                      "IT"
+                    ],
+                    "maxLength": 3,
+                    "minLength": 2,
+                    "description": "PIA_C212_7143"
+                  },
+                  "additionalItemType3": {
+                    "type": "string",
+                    "enum": [
+                      "IN",
+                      "SA",
+                      "MN",
+                      "IZ",
+                      "CL",
+                      "VN",
+                      "ST",
+                      "EN",
+                      "SK",
+                      "ZZZ",
+                      "GB",
+                      "CV",
+                      "EF",
+                      "BO",
+                      "BP",
+                      "AM",
+                      "IT"
+                    ],
+                    "maxLength": 3,
+                    "minLength": 2,
+                    "description": "PIA_C212_7143"
+                  },
+                  "additionalItemType4": {
+                    "type": "string",
+                    "enum": [
+                      "IN",
+                      "SA",
+                      "MN",
+                      "IZ",
+                      "CL",
+                      "VN",
+                      "ST",
+                      "EN",
+                      "SK",
+                      "ZZZ",
+                      "GB",
+                      "CV",
+                      "EF",
+                      "BO",
+                      "BP",
+                      "AM",
+                      "IT"
+                    ],
+                    "maxLength": 3,
+                    "minLength": 2,
+                    "description": "PIA_C212_7143"
+                  },
+                  "additionalItemType5": {
+                    "type": "string",
+                    "enum": [
+                      "IN",
+                      "SA",
+                      "MN",
+                      "IZ",
+                      "CL",
+                      "VN",
+                      "ST",
+                      "EN",
+                      "SK",
+                      "ZZZ",
+                      "GB",
+                      "CV",
+                      "EF",
+                      "BO",
+                      "BP",
+                      "AM",
+                      "IT"
+                    ],
+                    "maxLength": 3,
+                    "minLength": 2,
+                    "description": "PIA_C212_7143"
+                  },
+                  "additionalProductId": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "additionalItemNumber": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "minLength": 1,
+                          "description": "PIA_C212_7140",
+                          "pattern": "^[a-zA-Z0-9]+$"
+                        },
+                        "additionalItemNumber2": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "description": "PIA_C212_7140",
+                          "pattern": "^[a-zA-Z0-9]+$"
+                        },
+                        "additionalItemNumber3": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "description": "PIA_C212_7140",
+                          "pattern": "^[a-zA-Z0-9]+$"
+                        },
+                        "additionalItemNumber4": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "description": "PIA_C212_7140",
+                          "pattern": "^[a-zA-Z0-9]+$"
+                        },
+                        "additionalItemNumber5": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "description": "PIA_C212_7140",
+                          "pattern": "^[a-zA-Z0-9]+$"
+                        },
+                        "additionalItemType": {
+                          "type": "string",
+                          "maxLength": 3,
+                          "minLength": 2,
+                          "enum": [
+                            "AT",
+                            "IN",
+                            "SA",
+                            "MN",
+                            "IZ",
+                            "CL",
+                            "VN",
+                            "ST",
+                            "EN",
+                            "SK",
+                            "ZZZ",
+                            "GB",
+                            "CV",
+                            "EF",
+                            "UA",
+                            "SRV",
+                            "FM",
+                            "CUM"
+                          ],
+                          "description": "PIA_C212_7143"
+                        },
+                        "codeList": {
+                          "type": "string",
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "maxLength": 3,
+                          "description": "PIA_C212_3055",
+                          "enum": [
+                            "92",
+                            "9",
+                            "90",
+                            "91",
+                            "T",
+                            "83"
+                          ]
+                        },
+                        "codeList2": {
+                          "type": "string",
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "maxLength": 3,
+                          "enum": [
+                            "92",
+                            "9"
+                          ],
+                          "description": "PIA_C212_3055"
+                        },
+                        "codeList3": {
+                          "type": "string",
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "maxLength": 3,
+                          "enum": [
+                            "92",
+                            "9"
+                          ],
+                          "description": "PIA_C212_3055"
+                        },
+                        "codeList4": {
+                          "type": "string",
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "maxLength": 3,
+                          "enum": [
+                            "92",
+                            "9"
+                          ],
+                          "description": "PIA_C212_3055"
+                        },
+                        "codeList5": {
+                          "type": "string",
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "maxLength": 3,
+                          "enum": [
+                            "92",
+                            "9"
+                          ],
+                          "description": "PIA_C212_3055"
+                        },
+                        "productIdFunction": {
+                          "type": "string",
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "maxLength": 3,
+                          "minLength": 1,
+                          "enum": [
+                            "1",
+                            "5",
+                            "9",
+                            "4",
+                            "2",
+                            "X1"
+                          ],
+                          "description": "PIA_4347"
+                        }
+                      },
+                      "required": [
+                        "additionalItemNumber",
+                        "additionalItemType",
+                        "productIdFunction"
+                      ]
+                    }
+                  },
+                  "allowanceOrChargeDetails": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "settlementCoded": {
+                          "type": "string",
+                          "maxLength": 3,
+                          "enum": [
+                            "1",
+                            "2",
+                            "3",
+                            "5",
+                            "6"
+                          ],
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "description": "ALC_4471"
+                        },
+                        "allowanceOrChargeDescription": {
+                          "type": "string",
+                          "maxLength": 3,
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "enum": [
+                            "1",
+                            "32",
+                            "69"
+                          ],
+                          "description": "ALC_C552_5189"
+                        },
+                        "allowanceOrChargeNumber": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "description": "ALC_C552_1230"
+                        },
+                        "allowanceOrChargeQualifier": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 3,
+                          "enum": [
+                            "A",
+                            "C",
+                            "H",
+                            "N"
+                          ],
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "description": "ALC_5463"
+                        },
+                        "calculationSequenceIndicator": {
+                          "type": "string",
+                          "maxLength": 3,
+                          "enum": [
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5",
+                            "6",
+                            "7",
+                            "8",
+                            "9"
+                          ],
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "description": "ALC_1227"
+                        },
+                        "codeLlistCoded": {
+                          "type": "string",
+                          "maxLength": 3,
+                          "enum": [
+                            "EAB",
+                            "VAB",
+                            "TD",
+                            "TAE",
+                            "QD",
+                            "PI",
+                            "PAE",
+                            "ADO",
+                            "DDA",
+                            "X40"
+                          ],
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "description": "ALC_3055"
+                        },
+                        "specialServiceDescription": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "description": "ALC_C214_7160"
+                        },
+                        "specialServiceDescription2": {
+                          "type": "string",
+                          "maxLength": 35,
+                          "pattern": "^[a-zA-Z0-9]*$",
+                          "description": "ALC_C214_7160"
+                        },
+                        "specialServicesCoded": {
+                          "type": "string",
+                          "maxLength": 3,
+                          "pattern": "^[a-zA-Z0-9]*$",
+                          "description": "ALC_C214_7161",
+                          "enum": [
+                            "",
+                            "EAB",
+                            "VAB",
+                            "TD",
+                            "TAE",
+                            "QD",
+                            "PI",
+                            "PAE",
+                            "ADO",
+                            "DDA",
+                            "X40"
+                          ]
+                        },
+                        "detailsItemQuantityAllowance": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "quantity": {
+                                "type": "number",
+                                "minimum": -1E+15,
+                                "maximum": 1E+15,
+                                "multipleOf": 1E-05
+                              },
+                              "quantityUnitCode": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 3
+                              },
+                              "quantityQualifier": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 3,
+                                "enum": [
+                                  "21",
+                                  "192",
+                                  "37E",
+                                  "59",
+                                  "2",
+                                  "26",
+                                  "1",
+                                  "193",
+                                  "113",
+                                  "52",
+                                  "127",
+                                  "64",
+                                  "48",
+                                  "185",
+                                  "88",
+                                  "106",
+                                  "189",
+                                  "91",
+                                  "164",
+                                  "17E",
+                                  "246",
+                                  "45E",
+                                  "52"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "quantity",
+                              "quantityQualifier"
+                            ]
+                          }
+                        },
+                        "detailsMonetaryAllowance": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "allowanceMonetaryAmount": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3,
+                                "enum": [
+                                  "008",
+                                  "178",
+                                  "023",
+                                  "204",
+                                  "022",
+                                  "012"
+                                ]
+                              },
+                              "monetaryAmountPercentaje": {
+                                "type": "number",
+                                "minimum": -1E+15,
+                                "maximum": 1E+15,
+                                "multipleOf": 0.001
+                              }
+                            },
+                            "required": [
+                              "allowanceMonetaryAmount",
+                              "monetaryAmountPercentaje"
+                            ]
+                          }
+                        },
+                        "detailsPercentageAllowance": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "percentageQualifier": {
+                                "type": "string",
+                                "minLength": 3,
+                                "maxLength": 3,
+                                "enum": [
+                                  "012",
+                                  "007",
+                                  "001",
+                                  "002",
+                                  "003"
+                                ]
+                              },
+                              "percentageValueDetailsAllowance": {
+                                "oneOf": [
+                                  {
+                                    "type": "number",
+                                    "minimum": -99999999.9,
+                                    "maximum": 99999999.9
+                                  },
+                                  {
+                                    "type": "number",
+                                    "minimum": -1E+15,
+                                    "maximum": 1E+15,
+                                    "multipleOf": 1E-05,
+                                    "pattern": "^\\-?\\d{1,15}(\\.\\d{1,5})?$",
+                                    "not": {
+                                      "type": "number",
+                                      "minimum": -99999999.9,
+                                      "maximum": 99999999.9
+                                    }
+                                  }
+                                ]
+                              },
+                              "rangeAllowance": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "measureUnitQualifier": {
+                                      "type": "string",
+                                      "minLength": 3,
+                                      "maxLength": 3,
+                                      "enum": [
+                                        "CEL",
+                                        "CMT",
+                                        "MGM",
+                                        "MMT",
+                                        "MTR",
+                                        "AMT",
+                                        "CMQ",
+                                        "KGM",
+                                        "MLT",
+                                        "NAR",
+                                        "LTR"
+                                      ]
+                                    },
+                                    "rangeMaximumPercentaje": {
+                                      "type": "number",
+                                      "minimum": -1E+15,
+                                      "maximum": 1E+15,
+                                      "multipleOf": 0.001
+                                    },
+                                    "rangeMinimumPercentaje": {
+                                      "type": "number",
+                                      "minimum": -1E+15,
+                                      "maximum": 1E+15,
+                                      "multipleOf": 0.001
+                                    },
+                                    "rangeType": {
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "maxLength": 3,
+                                      "enum": [
+                                        "1",
+                                        "2"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "rateDetails": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "ratePerUnit": {
+                                "type": "number",
+                                "minimum": -1E+15,
+                                "maximum": 1E+15,
+                                "multipleOf": 0.001
+                              },
+                              "rateTypeQualifier": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 3,
+                                "enum": [
+                                  "1"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "allowanceOrChargeQualifier"
+                      ]
+                    }
+                  },
+                  "codeList": {
+                    "type": "string",
+                    "maxLength": 3,
+                    "enum": [
+                      "9",
+                      "83",
+                      "90",
+                      "91",
+                      "92",
+                      "T"
+                    ]
+                  },
+                  "codeListAgency": {
+                    "type": "string",
+                    "description": "Agencia Responsable de la lista de códigos, codificado",
+                    "maxLength": 3,
+                    "enum": [
+                      "9",
+                      "14",
+                      "16",
+                      "775"
+                    ]
+                  },
+                  "configurationCoded": {
+                    "type": "string",
+                    "description": "Configuración, Codificado",
+                    "maxLength": 3
+                  },
+                  "dateTimePeriod": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "dateTime": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": []
+        }
+      }
     }
-}
+  }
