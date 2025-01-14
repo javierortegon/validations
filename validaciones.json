@@ -1,0 +1,122 @@
+{
+    "interchangeHeader": {
+            "required": [
+                "syntaxIdentifier",
+                "syntaxVersionNumber",
+                "senderIdentification",
+                "partnerIdentificationCodeQualifier",
+                "recipientIdentification",
+                "recipientIdentificationCodeQualifier",
+                "date",
+                "time",
+                "interchangeControlReference",
+                "password"
+            ],
+            "properties": {
+                "syntaxIdentifier": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z]+$",
+                    "minLength": 4,
+                    "maxLength": 4,
+                    "description": "UNB_S001_1",
+                    "enum": [
+                        "UNOA",
+                        "UNOB",
+                        "UNOC"
+                    ]
+                },
+                "syntaxVersionNumber": {
+                    "type": "number",
+                    "description": "UNB_S001_2",
+                    "enum": [
+                        2,
+                        3
+                    ]
+                },
+                "senderIdentification": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 35,
+                    "description": "UNB_S002_4"
+                },
+                "partnerIdentificationCodeQualifier": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 4,
+                    "description": "UNB_S002_7",
+                    "enum": [
+                        "14"
+                    ]
+                },
+                "recipientIdentification": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 35,
+                    "description": "UNB_S003_10"
+                },
+                "recipientIdentificationCodeQualifier": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 35,
+                    "description": "UNB_S003_7",
+                    "enum": [
+                        "14"
+                    ]
+                },
+                "recipientIdentificationCodeCountry": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 3,
+                    "description": "UNB_S003"
+                },
+                "date": {
+                    "type": "string",
+                    "pattern": "^[0-9]{6}$",
+                    "minLength": 6,
+                    "maxLength": 6,
+                    "description": "UNB_S004_17"
+                },
+                "time": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$",
+                    "minLength": 4,
+                    "maxLength": 4,
+                    "description": "UNB_S004_19"
+                },
+                "interchangeControlReference": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 14,
+                    "description": "UNB_20"
+                },
+                "password": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 14,
+                    "description": "UNB_S005_22"
+                },
+                "applicationReference": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 14,
+                    "description": "UNB_26",
+                    "enum": [
+                        "ORDERS"
+                    ]
+                },
+                "acknowledgementRequest": {
+                    "type": "number",
+                    "description": "UNB_0031"
+                }
+            }
+        }
+ 
+}

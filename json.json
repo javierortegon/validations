@@ -1,0 +1,17 @@
+{
+    "interchangeHeader": {
+        "syntaxIdentifier": "UNOA",
+        "syntaxVersionNumber": 2,
+        "senderIdentification": "7701008100015",
+        "partnerIdentificationCodeQualifier": "14",
+        "recipientIdentification": "7702398000015",
+        "recipientIdentificationCodeQualifier": "14",
+        "recipientIdentificationCodeCountry": "CO",
+        "date": "240307",
+        "time": "1128",
+        "interchangeControlReference": "TS3195125",
+        "password": "123456",
+        "applicationReference": "ORDERS",
+        "acknowledgementRequest": 1212
+    }
+}
