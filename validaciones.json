@@ -1077,6 +1077,149 @@
               "allowanceOrChargeSummary",
               "controlTotal"
             ]
+          },
+          "header": {
+            "type": "object",
+            "properties": {
+              "termsOfDelivery": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "locationTerms": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "codeListAgency": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "description": "LOC_C517_3055",
+                            "enum": [
+                              "",
+                              "9",
+                              "775",
+                              "16",
+                              "14"
+                            ]
+                          },
+                          "location": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "description": "LOC_C517_3224"
+                          },
+                          "locationQualifier": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "minLength": 1,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "enum": [
+                              "1",
+                              "7",
+                              "18",
+                              "20",
+                              "27",
+                              "80",
+                              "83",
+                              "ZZZ"
+                            ],
+                            "description": "LOC_3227"
+                          },
+                          "locationIdentification": {
+                            "type": "string",
+                            "maxLength": 25,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "description": "LOC_C517_3225"
+                          }
+                        },
+                        "required": [
+                          "locationQualifier"
+                        ],
+                        "if": {
+                          "properties": {
+                            "codeListAgency": {
+                              "minLength": 1
+                            }
+                          }
+                        },
+                        "then": {
+                          "required": [
+                            "location"
+                          ]
+                        }
+                      }
+                    },
+                    "termsOfDelivery": {
+                      "type": "string",
+                      "maxLength": 70,
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "TOD_C100_4052"
+                    },
+                    "termsOfDelivery2": {
+                      "type": "string",
+                      "maxLength": 70,
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "TOD_C100_4052"
+                    },
+                    "termsOfDeliveryCoded": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "TOD_C100_4053",
+                      "enum": [
+                        "CAD",
+                        "CFR",
+                        "CIF",
+                        "CIP",
+                        "CPT",
+                        "DAP",
+                        "DDP",
+                        "DDU",
+                        "DEQ",
+                        "DES",
+                        "EXW",
+                        "FCA",
+                        "FAS",
+                        "FOB",
+                        "N",
+                        "PO",
+                        "Y"
+                      ]
+                    },
+                    "termsOfdeliveryFunction": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "TOD_C100_4053",
+                      "enum": [
+                        "3",
+                        "5",
+                        "6"
+                      ]
+                    },
+                    "transportCharges": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "TOD_C100_4053",
+                      "enum": [
+                        "WD",
+                        "WE",
+                        "FO",
+                        "CC",
+                        "PO"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "required": []

@@ -145,6 +145,25 @@
           "messageReference": "1",
           "numberSegments": 2
         }
+      },
+      "header": {
+        "termsOfDelivery": [
+          {
+            "termsOfDelivery": "1",
+            "termsOfDelivery2": "Y",
+            "termsOfDeliveryCoded": "CAD",
+            "termsOfdeliveryFunction": "3",
+            "transportCharges": "WD",
+            "locationTerms": [
+              {
+                "codeListAgency": "9",
+                "location": "j",
+                "locationQualifier": "1",
+                "locationIdentification": "123"
+              }
+            ]
+          }
+        ]
       }
     }
   ]
