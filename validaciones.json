@@ -2378,6 +2378,64 @@
                     ]
                   }
                 }
+              },
+              "package": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "descriptionType": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "description": "PAC_C402_7077",
+                      "enum": [
+                        "",
+                        "F"
+                      ]
+                    },
+                    "numberPackages": {
+                      "type": "number",
+                      "description": "PAC_7224",
+                      "maximum": 99999999
+                    },
+                    "typeOfPackages": {
+                      "type": "string",
+                      "maxLength": 35,
+                      "description": "PAC_C402_7064"
+                    },
+                    "packageMeasurements": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "measurementQualifier": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "minLength": 1,
+                            "description": "MEA_C311",
+                            "enum": [
+                              "VOL",
+                              "AAH"
+                            ]
+                          },
+                          "measurementValue": {
+                            "type": "string",
+                            "maxLength": 14,
+                            "description": "MEA_C174_6314"
+                          },
+                          "measurementUnit": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "description": "MEA_C174_6311"
+                          }
+                        },
+                        "required": [
+                          "measurementQualifier"
+                        ]
+                      }
+                    }
+                  }
+                }
               }
             }
           }
