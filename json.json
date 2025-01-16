@@ -230,14 +230,22 @@
           }
         ],
         "paymentInstructions": [
-            {
-              "paymentConditions": "1",
-              "paymentMeans": "42",
-              "paymentGuarantee": "20",
-              "codeList": "12",
-              "paymentChannel": "1"
-            }
-          ]
+          {
+            "paymentConditions": "1",
+            "paymentMeans": "42",
+            "paymentGuarantee": "20",
+            "codeList": "12",
+            "paymentChannel": "1"
+          }
+        ],
+        "messageHeader": {
+          "messageReferenceNumber": "1",
+          "messageTypeIdentifier": "ORDERS",
+          "messageTypeVersionNumber": "D",
+          "messageTypeReleaseNumber": "96A",
+          "controllingAgency": "UN",
+          "associationAssignedCode": "EAN010"
+        }
       }
     }
   ]

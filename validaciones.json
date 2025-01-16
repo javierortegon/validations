@@ -1597,6 +1597,78 @@
                     }
                   }
                 }
+              },
+              "messageHeader": {
+                "type": "object",
+                "required": [
+                  "messageReferenceNumber",
+                  "messageTypeIdentifier",
+                  "messageTypeVersionNumber",
+                  "messageTypeReleaseNumber",
+                  "controllingAgency",
+                  "associationAssignedCode"
+                ],
+                "properties": {
+                  "messageReferenceNumber": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 14,
+                    "description": "UNH_62"
+                  },
+                  "messageTypeIdentifier": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 6,
+                    "description": "UNH_S009_65",
+                    "enum": [
+                      "ORDERS"
+                    ]
+                  },
+                  "messageTypeVersionNumber": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 3,
+                    "description": "UNH_S009_52",
+                    "enum": [
+                      "D"
+                    ]
+                  },
+                  "messageTypeReleaseNumber": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 3,
+                    "description": "UNH_S009_54",
+                    "enum": [
+                      "96A",
+                      "01B"
+                    ]
+                  },
+                  "controllingAgency": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z]+$",
+                    "minLength": 1,
+                    "maxLength": 2,
+                    "description": "UNH_S009_51",
+                    "enum": [
+                      "UN"
+                    ]
+                  },
+                  "associationAssignedCode": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9]+$",
+                    "minLength": 1,
+                    "maxLength": 6,
+                    "description": "UNH_S009_57",
+                    "enum": [
+                      "EAN008",
+                      "EAN010"
+                    ]
+                  }
+                }
               }
             }
           }
