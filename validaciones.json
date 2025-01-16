@@ -1531,6 +1531,72 @@
                     "paymentTimeReference"
                   ]
                 }
+              },
+              "paymentInstructions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "paymentConditions",
+                    "paymentGuarantee",
+                    "paymentMeans",
+                    "codeList",
+                    "paymentChannel"
+                  ],
+                  "properties": {
+                    "paymentConditions": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "PAI_C534_4439",
+                      "enum": [
+                        "1",
+                        "OA"
+                      ]
+                    },
+                    "paymentGuarantee": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "PAI_C534_4431",
+                      "enum": [
+                        "20"
+                      ]
+                    },
+                    "paymentMeans": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "PAI_C534_4461",
+                      "enum": [
+                        "60",
+                        "70",
+                        "10E",
+                        "42"
+                      ]
+                    },
+                    "codeList": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 17,
+                      "description": "PAI_C534_3055"
+                    },
+                    "paymentChannel": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "PAI_C534_4435",
+                      "enum": [
+                        "1"
+                      ]
+                    }
+                  }
+                }
               }
             }
           }

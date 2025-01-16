@@ -228,7 +228,16 @@
               }
             ]
           }
-        ]
+        ],
+        "paymentInstructions": [
+            {
+              "paymentConditions": "1",
+              "paymentMeans": "42",
+              "paymentGuarantee": "20",
+              "codeList": "12",
+              "paymentChannel": "1"
+            }
+          ]
       }
     }
   ]
