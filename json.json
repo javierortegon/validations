@@ -172,6 +172,62 @@
               "referenceQualifier": "AAG"
             }
           }
+        ],
+        "paymentTerms": [
+          {
+            "codeListAgency": "9",
+            "codeListQualifier": "1",
+            "numberOfPeriods": 30,
+            "paymentTermsIdentification": "6",
+            "paymentTermsQualifier": "9",
+            "paymentTimeReference": "5",
+            "termsOfPayment": "D",
+            "termsOfPayment2": "30",
+            "timeRelation": "3",
+            "typeOfPeriod": "D",
+            "percentagePaymentTerms": [
+              {
+                "percentageBasis": "1",
+                "percentageQualifier": "12",
+                "percentageValuePaymentTerms": 5.0
+              }
+            ],
+            "dateTime": [
+              {
+                "dateTimeQualifier": "63",
+                "date": "202403070000",
+                "dateTimeFormatQualifier": "102"
+              }
+            ]
+          },
+          {
+            "paymentTermsQualifier": "1",
+            "paymentTimeReference": "5",
+            "timeRelation": "3",
+            "typeOfPeriod": "D",
+            "numberOfPeriods": 30,
+            "percentagePaymentTerms": [
+              {
+                "percentageBasis": "1",
+                "percentageQualifier": "12",
+                "percentageValuePaymentTerms": 5.12342
+              }
+            ]
+          },
+          {
+            "paymentTermsQualifier": "1",
+            "paymentTimeReference": "21",
+            "timeRelation": "3",
+            "typeOfPeriod": "D",
+            "numberOfPeriods": 30,
+            "percentagePaymentTerms": [
+              {
+                "percentageBasis": "1",
+                "percentageQualifier": "12",
+                "percentageValuePaymentTerms": 123456.123
+              }
+            ]
+          }
         ]
       }
     }

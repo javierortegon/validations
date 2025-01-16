@@ -1220,106 +1220,318 @@
                 }
               },
               "requirementsConditions": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "sectorIdentification": {
-                        "type": "string",
-                        "maxLength": 3,
-                        "minLength": 1,
-                        "pattern": "^[a-zA-Z0-9]+$",
-                        "description": "RCS_7293"
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "sectorIdentification": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "RCS_7293"
+                    },
+                    "referenceRequirements": {
+                      "type": "object",
+                      "properties": {
+                        "referenceQualifier": {
+                          "type": "string",
+                          "maxLength": 3,
+                          "minLength": 1,
+                          "pattern": "^[a-zA-Z0-9]+$",
+                          "description": "RFF_C506_1153",
+                          "enum": [
+                            "AAG",
+                            "AAL",
+                            "AAN",
+                            "AAO",
+                            "ABH",
+                            "ABO",
+                            "ACD",
+                            "ACE",
+                            "ADA",
+                            "ADD",
+                            "AFF",
+                            "AFZ",
+                            "AGM",
+                            "AGW",
+                            "AHP",
+                            "ALT",
+                            "ALX",
+                            "APH",
+                            "ARP",
+                            "BO",
+                            "CO",
+                            "COF",
+                            "CP",
+                            "CR",
+                            "CS",
+                            "CT",
+                            "EA",
+                            "FC",
+                            "GC",
+                            "GN",
+                            "IA",
+                            "IP",
+                            "LI",
+                            "NNN",
+                            "ON",
+                            "PD",
+                            "PE",
+                            "PL",
+                            "PS",
+                            "PW",
+                            "SD",
+                            "VA",
+                            "VAT",
+                            "VN",
+                            "VR",
+                            "VS",
+                            "ZZZ"
+                          ]
+                        },
+                        "referenceNumber": {
+                          "type": "string",
+                          "maxLength": 70,
+                          "pattern": "^[a-zA-Z0-9]*$",
+                          "description": "RFF_C506_1154"
+                        }
                       },
-                      "referenceRequirements": {
-                        "type": "object",
+                      "if": {
                         "properties": {
                           "referenceQualifier": {
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      "then": {
+                        "required": [
+                          "referenceNumber"
+                        ]
+                      },
+                      "required": [
+                        "referenceQualifier"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "sectorIdentification",
+                    "referenceRequirements"
+                  ]
+                }
+              },
+              "paymentTerms": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "paymentTermsQualifier": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "PAT_4279",
+                      "enum": [
+                        "1",
+                        "2",
+                        "3",
+                        "8",
+                        "9",
+                        "18",
+                        "22",
+                        "30"
+                      ]
+                    },
+                    "paymentTermsIdentification": {
+                      "type": "string",
+                      "maxLength": 17,
+                      "pattern": "^[a-zA-Z0-9]*$",
+                      "description": "PAT_C110_4277",
+                      "enum": [
+                        "6"
+                      ]
+                    },
+                    "codeListQualifier": {
+                      "type": "string",
+                      "maxLength": 17,
+                      "pattern": "^[a-zA-Z0-9]*$",
+                      "description": "PAT_C110_1131"
+                    },
+                    "codeListAgency": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "description": "PAT_C110_3055"
+                    },
+                    "termsOfPayment": {
+                      "type": "string",
+                      "maxLength": 35,
+                      "pattern": "^[a-zA-Z0-9]*$",
+                      "description": "PAT_C110_4276"
+                    },
+                    "termsOfPayment2": {
+                      "type": "string",
+                      "maxLength": 35,
+                      "pattern": "^[a-zA-Z0-9]*$",
+                      "description": "PAT_C110_4276"
+                    },
+                    "paymentTimeReference": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "pattern": "^[a-zA-Z0-9]*$",
+                      "description": "PAT_C112_2475",
+                      "enum": [
+                        "",
+                        "1",
+                        "5",
+                        "9",
+                        "21",
+                        "25",
+                        "54",
+                        "60",
+                        "66",
+                        "68",
+                        "72",
+                        "77"
+                      ]
+                    },
+                    "timeRelation": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "pattern": "^[a-zA-Z0-9]*$",
+                      "description": "PAT_C112_2009",
+                      "enum": [
+                        "3"
+                      ]
+                    },
+                    "typeOfPeriod": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "pattern": "^[a-zA-Z0-9]*$",
+                      "description": "PAT_C112_2151",
+                      "enum": [
+                        "D"
+                      ]
+                    },
+                    "numberOfPeriods": {
+                      "type": "number",
+                      "maximum": 999,
+                      "description": "PAT_C112_2152"
+                    },
+                    "dateTime": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "dateTimeQualifier": {
                             "type": "string",
                             "maxLength": 3,
                             "minLength": 1,
                             "pattern": "^[a-zA-Z0-9]+$",
-                            "description": "RFF_C506_1153",
+                            "description": "DTM_C507_2005",
                             "enum": [
-                              "AAG",
-                              "AAL",
-                              "AAN",
-                              "AAO",
-                              "ABH",
-                              "ABO",
-                              "ACD",
-                              "ACE",
-                              "ADA",
-                              "ADD",
-                              "AFF",
-                              "AFZ",
-                              "AGM",
-                              "AGW",
-                              "AHP",
-                              "ALT",
-                              "ALX",
-                              "APH",
-                              "ARP",
-                              "BO",
-                              "CO",
-                              "COF",
-                              "CP",
-                              "CR",
-                              "CS",
-                              "CT",
-                              "EA",
-                              "FC",
-                              "GC",
-                              "GN",
-                              "IA",
-                              "IP",
-                              "LI",
-                              "NNN",
-                              "ON",
-                              "PD",
-                              "PE",
-                              "PL",
-                              "PS",
-                              "PW",
-                              "SD",
-                              "VA",
-                              "VAT",
-                              "VN",
-                              "VR",
-                              "VS",
-                              "ZZZ"
+                              "2",
+                              "7",
+                              "10",
+                              "11",
+                              "15",
+                              "16",
+                              "61",
+                              "63",
+                              "64",
+                              "69",
+                              "100",
+                              "138",
+                              "200",
+                              "265",
+                              "361",
+                              "364",
+                              "X14",
+                              "X16"
                             ]
                           },
-                          "referenceNumber": {
+                          "date": {
                             "type": "string",
-                            "maxLength": 70,
-                            "pattern": "^[a-zA-Z0-9]*$",
-                            "description": "RFF_C506_1154"
+                            "maxLength": 35,
+                            "minLength": 1,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "description": "DTM_C507_2380"
+                          },
+                          "dateTimeFormatQualifier": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "minLength": 1,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "description": "DTM_C507_2379",
+                            "enum": [
+                              "102",
+                              "203",
+                              "106",
+                              "718",
+                              "109",
+                              "616"
+                            ]
                           }
-                        },
-                        "if": {
-                          "properties": {
-                            "referenceQualifier": {
-                              "minLength": 1
-                            }
-                          }
-                        },
-                        "then": {
-                          "required": [
-                            "referenceNumber"
-                          ]
                         },
                         "required": [
-                          "referenceQualifier"
+                          "dateTimeQualifier",
+                          "date",
+                          "dateTimeFormatQualifier"
                         ]
                       }
                     },
-                    "required": [
-                      "sectorIdentification",
-                      "referenceRequirements"
-                    ]
-                  }
+                    "percentagePaymentTerms": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "percentageQualifier": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "minLength": 1,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "description": "PCD_C501_5245",
+                            "enum": [
+                              "1",
+                              "2",
+                              "3",
+                              "7",
+                              "12"
+                            ]
+                          },
+                          "percentageBasis": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "minLength": 1,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "description": "PCD_C501_5249",
+                            "enum": [
+                              "13",
+                              "1"
+                            ]
+                          },
+                          "percentageValuePaymentTerms": {
+                            "type": "number",
+                            "minimum": -1E+15,
+                            "maximum": 1E+15,
+                            "multipleOf": 1E-05,
+                            "description": "PCD_C501_5482"
+                          }
+                        },
+                        "required": [
+                          "percentageQualifier",
+                          "percentageBasis",
+                          "percentageValuePaymentTerms"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "paymentTermsQualifier",
+                    "paymentTimeReference"
+                  ]
                 }
+              }
             }
           }
         },
