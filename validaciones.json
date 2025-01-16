@@ -1218,7 +1218,108 @@
                     }
                   }
                 }
-              }
+              },
+              "requirementsConditions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sectorIdentification": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "minLength": 1,
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "description": "RCS_7293"
+                      },
+                      "referenceRequirements": {
+                        "type": "object",
+                        "properties": {
+                          "referenceQualifier": {
+                            "type": "string",
+                            "maxLength": 3,
+                            "minLength": 1,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "description": "RFF_C506_1153",
+                            "enum": [
+                              "AAG",
+                              "AAL",
+                              "AAN",
+                              "AAO",
+                              "ABH",
+                              "ABO",
+                              "ACD",
+                              "ACE",
+                              "ADA",
+                              "ADD",
+                              "AFF",
+                              "AFZ",
+                              "AGM",
+                              "AGW",
+                              "AHP",
+                              "ALT",
+                              "ALX",
+                              "APH",
+                              "ARP",
+                              "BO",
+                              "CO",
+                              "COF",
+                              "CP",
+                              "CR",
+                              "CS",
+                              "CT",
+                              "EA",
+                              "FC",
+                              "GC",
+                              "GN",
+                              "IA",
+                              "IP",
+                              "LI",
+                              "NNN",
+                              "ON",
+                              "PD",
+                              "PE",
+                              "PL",
+                              "PS",
+                              "PW",
+                              "SD",
+                              "VA",
+                              "VAT",
+                              "VN",
+                              "VR",
+                              "VS",
+                              "ZZZ"
+                            ]
+                          },
+                          "referenceNumber": {
+                            "type": "string",
+                            "maxLength": 70,
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "description": "RFF_C506_1154"
+                          }
+                        },
+                        "if": {
+                          "properties": {
+                            "referenceQualifier": {
+                              "minLength": 1
+                            }
+                          }
+                        },
+                        "then": {
+                          "required": [
+                            "referenceNumber"
+                          ]
+                        },
+                        "required": [
+                          "referenceQualifier"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "sectorIdentification",
+                      "referenceRequirements"
+                    ]
+                  }
+                }
             }
           }
         },

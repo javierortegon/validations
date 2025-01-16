@@ -163,6 +163,15 @@
               }
             ]
           }
+        ],
+        "requirementsConditions": [
+          {
+            "sectorIdentification": "WD",
+            "referenceRequirements": {
+              "referenceNumber": "9",
+              "referenceQualifier": "AAG"
+            }
+          }
         ]
       }
     }
