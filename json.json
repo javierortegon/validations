@@ -110,7 +110,42 @@
             "codeListAgency": "9",
             "configurationCoded": "12"
           }
-        ]
+        ],
+        "summary": {
+          "monetaryAmountSummary": [
+            {
+              "currencySummary": "ARS",
+              "monetaryAmount": 1,
+              "monetaryAmountQualifierSummary": "1"
+            }
+          ],
+          "allowanceOrChargeSummary": [
+            {
+              "allowanceOrChargeNumber": "k",
+              "allowanceOrChargeQualifier": "A22",
+              "monetaryAllowanceSummary": [
+                {
+                  "allowanceMonetaryAmount": "13",
+                  "monetaryAmountPercentaje": 1
+                }
+              ]
+            }
+          ],
+          "controlTotal": [
+            {
+              "controlQualifier": "1",
+              "controlValue": 12,
+              "measureUnitControl": "MLT"
+            }
+          ],
+          "sectionControl": {
+            "sectionIdentification": "s"
+          },
+          "messageTrailer": {
+            "messageReference": "1",
+            "numberSegments": 2
+          }
+        }
       }
     ]
   }

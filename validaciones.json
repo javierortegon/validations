@@ -753,6 +753,356 @@
                   }
                 }
               }
+            },
+            "summary": {
+              "type": "object",
+              "properties": {
+                "sectionControl": {
+                  "type": "object",
+                  "properties": {
+                    "sectionIdentification": {
+                      "description": "UNS_81",
+                      "type": "string",
+                      "pattern": "^[a-zA-Z]+$",
+                      "minLength": 1,
+                      "maxLength": 1
+                    }
+                  },
+                  "required": [
+                    "sectionIdentification"
+                  ]
+                },
+                "messageTrailer": {
+                  "type": "object",
+                  "properties": {
+                    "messageReference": {
+                      "description": "UNT_62",
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 14
+                    },
+                    "numberSegments": {
+                      "description": "UNT_74",
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 999999
+                    }
+                  },
+                  "required": [
+                    "messageReference",
+                    "numberSegments"
+                  ]
+                },
+                "allowanceOrChargeSummary": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "allowanceOrChargeQualifier": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 3,
+                        "description": "ALC_5463_2005",
+                        "pattern": "^[a-zA-Z0-9]+$"
+                      },
+                      "allowanceOrChargeNumber": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 35,
+                        "description": "ALC_C552_1230",
+                        "pattern": "^[a-zA-Z0-9]+$"
+                      },
+                      "monetaryAllowanceSummary": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "allowanceMonetaryAmount": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 3,
+                              "pattern": "^[a-zA-Z0-9]+$",
+                              "description": "MOA_C516_5025"
+                            },
+                            "monetaryAmountPercentaje": {
+                              "type": "number",
+                              "minimum": -1E+15,
+                              "maximum": 1E+15,
+                              "multipleOf": 0.001
+                            }
+                          },
+                          "if": {
+                            "properties": {
+                              "allowanceMonetaryAmount": {
+                                "minLength": 1
+                              }
+                            }
+                          },
+                          "then": {
+                            "required": [
+                              "monetaryAmountPercentaje"
+                            ]
+                          },
+                          "required": [
+                            "allowanceMonetaryAmount"
+                          ]
+                        }
+                      }
+                    },
+                    "if": {
+                      "properties": {
+                        "allowanceOrChargeQualifier": {
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "allowanceOrChargeNumber"
+                      ]
+                    },
+                    "required": [
+                      "allowanceOrChargeQualifier"
+                    ]
+                  }
+                },
+                "controlTotal": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "controlQualifier": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 3,
+                        "description": "CNT_C270_6069",
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "7",
+                          "7",
+                          "8",
+                          "11",
+                          "15",
+                          "23",
+                          "26",
+                          "27",
+                          "27",
+                          "29"
+                        ]
+                      },
+                      "controlValue": {
+                        "type": "number",
+                        "minimum": -1E+15,
+                        "maximum": 1E+15,
+                        "multipleOf": 0.001,
+                        "description": "CNT_C270_6066"
+                      },
+                      "measureUnitControl": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 3,
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "description": "CNT_C270_6411",
+                        "enum": [
+                          "CMT",
+                          "GRM",
+                          "KGM",
+                          "MLT",
+                          "MMT",
+                          "NAR"
+                        ]
+                      },
+                      "if": {
+                        "properties": {
+                          "controlQualifier": {
+                            "minLength": 1
+                          },
+                          "controlValue": {
+                            "minimum": -1E+15
+                          }
+                        }
+                      },
+                      "then": {
+                        "required": [
+                          "measureUnitControl"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "controlQualifier",
+                      "controlValue"
+                    ]
+                  }
+                },
+                "monetaryAmountSummary": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "currencySummary": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3,
+                        "description": "MOA_C516_6345",
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "enum": [
+                          "ARS",
+                          "ATS",
+                          "AUD",
+                          "BEF",
+                          "BGL",
+                          "BRL",
+                          "CAD",
+                          "CHF",
+                          "CLP",
+                          "CNY",
+                          "COP",
+                          "CRC",
+                          "CUP",
+                          "CYP",
+                          "CZK",
+                          "DEM",
+                          "DKK",
+                          "DOP",
+                          "DZD",
+                          "ECS",
+                          "EEK",
+                          "EGP",
+                          "ESP",
+                          "EUR",
+                          "FIM",
+                          "FRF",
+                          "GBP",
+                          "GRD",
+                          "GTQ",
+                          "HKD",
+                          "HNL",
+                          "HRD",
+                          "HUF",
+                          "IDR",
+                          "IEP",
+                          "ILS",
+                          "INR",
+                          "IOD",
+                          "IRR",
+                          "ISK",
+                          "ITL",
+                          "JOD",
+                          "JPY",
+                          "KPW",
+                          "KWD",
+                          "LKR",
+                          "LTL",
+                          "LUF",
+                          "LVL",
+                          "MAD",
+                          "MTL",
+                          "MXN",
+                          "MXP",
+                          "MYR",
+                          "NAD",
+                          "NIO",
+                          "NLG",
+                          "NOK",
+                          "NZD",
+                          "PAB",
+                          "PEN",
+                          "PHP",
+                          "PKR",
+                          "PLZ",
+                          "PTE",
+                          "PYG",
+                          "ROL",
+                          "RUR",
+                          "SAR",
+                          "SEK",
+                          "SGD",
+                          "SIT",
+                          "SKK",
+                          "SVC",
+                          "THB",
+                          "TND",
+                          "TRL",
+                          "TWD",
+                          "USD",
+                          "UYU",
+                          "VEB",
+                          "XEU",
+                          "YUN",
+                          "ZAR",
+                          "BOB"
+                        ]
+                      },
+                      "monetaryAmount": {
+                        "type": "number",
+                        "minimum": -1E+15,
+                        "maximum": 1E+15,
+                        "multipleOf": 0.001,
+                        "description": "MOA_C516_5004"
+                      },
+                      "monetaryAmountQualifierSummary": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 3,
+                        "description": "MOA_C516_5025",
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "enum": [
+                          "1",
+                          "4",
+                          "14",
+                          "17",
+                          "23",
+                          "24",
+                          "28",
+                          "28",
+                          "32",
+                          "33",
+                          "39",
+                          "64",
+                          "66",
+                          "68",
+                          "79",
+                          "86",
+                          "120",
+                          "124",
+                          "125",
+                          "128",
+                          "150",
+                          "156",
+                          "161",
+                          "168",
+                          "176",
+                          "204",
+                          "208",
+                          "259",
+                          "260",
+                          "268",
+                          "289",
+                          "289",
+                          "298",
+                          "299",
+                          "342"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "monetaryAmountQualifierSummary",
+                      "monetaryAmount",
+                      "currencySummary"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "sectionControl",
+                "messageTrailer",
+                "allowanceOrChargeSummary",
+                "controlTotal"
+              ]
             }
           },
           "required": []
