@@ -1459,6 +1459,1823 @@
                   "type": "number",
                   "maximum": 999999,
                   "description": "LIN_1082"
+                },
+                "monetaryAmountDetails": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "monetaryAmount",
+                      "monetaryAmountQualifier"
+                    ],
+                    "properties": {
+                      "currencyCoded": {
+                        "type": "string",
+                        "description": "MOA_C516_6345",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "ARS",
+                          "ATS",
+                          "AUD",
+                          "BEF",
+                          "BGL",
+                          "BRL",
+                          "CAD",
+                          "CHF",
+                          "CLP",
+                          "CNY",
+                          "COP",
+                          "CRC",
+                          "CUP",
+                          "CYP",
+                          "CZK",
+                          "DEM",
+                          "DKK",
+                          "DOP",
+                          "DZD",
+                          "ECS",
+                          "EEK",
+                          "EGP",
+                          "ESP",
+                          "EUR",
+                          "FIM",
+                          "FRF",
+                          "GBP",
+                          "GRD",
+                          "GTQ",
+                          "HKD",
+                          "HNL",
+                          "HRD",
+                          "HUF",
+                          "IDR",
+                          "IEP",
+                          "ILS",
+                          "INR",
+                          "IOD",
+                          "IRR",
+                          "ISK",
+                          "ITL",
+                          "JOD",
+                          "JPY",
+                          "KPW",
+                          "KWD",
+                          "LKR",
+                          "LTL",
+                          "LUF",
+                          "LVL",
+                          "MAD",
+                          "MTL",
+                          "MXN",
+                          "MYR",
+                          "NAD",
+                          "NIO",
+                          "NLG",
+                          "NOK",
+                          "NZD",
+                          "PAB",
+                          "PEN",
+                          "PHP",
+                          "PKR",
+                          "PLZ",
+                          "PTE",
+                          "PYG",
+                          "ROL",
+                          "RUR",
+                          "SAR",
+                          "SEK",
+                          "SGD",
+                          "SIT",
+                          "SKK",
+                          "SVC",
+                          "THB",
+                          "TND",
+                          "TRL",
+                          "TWD",
+                          "USD",
+                          "UYU",
+                          "VEB",
+                          "XEU",
+                          "YUN",
+                          "ZAR",
+                          "BOB",
+                          "MXP"
+                        ]
+                      },
+                      "monetaryAmount": {
+                        "type": "number",
+                        "description": "MOA_C516_5004",
+                        "minimum": 16
+                      },
+                      "monetaryAmountQualifier": {
+                        "type": "string",
+                        "description": "MOA_C516_5025",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "203",
+                          "66",
+                          "146",
+                          "AAB",
+                          "116",
+                          "56",
+                          "23",
+                          "79",
+                          "128",
+                          "64",
+                          "40",
+                          "388",
+                          "150",
+                          "1"
+                        ]
+                      },
+                      "statusCoded": {
+                        "type": "string",
+                        "description": "MOA_C516_4405",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3
+                      }
+                    }
+                  }
+                },
+                "packageDetails": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "codeList": {
+                        "type": "string",
+                        "description": "PAC_C202_1131",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 17
+                      },
+                      "codeLlistAgency": {
+                        "type": "string",
+                        "description": "PAC_C202_3055",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "9",
+                          "775",
+                          "16",
+                          "9",
+                          "14"
+                        ]
+                      },
+                      "handlingPackQuantityUnit": {
+                        "type": "number",
+                        "maximum": 6,
+                        "description": "PAC_C402"
+                      },
+                      "handlingPackTypeUnit": {
+                        "type": "string",
+                        "description": "PAC_C402",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 17,
+                        "enum": [
+                          "NE",
+                          "BG",
+                          "BO",
+                          "CA",
+                          "CX",
+                          "HR",
+                          "PU",
+                          "SA",
+                          "TU",
+                          "STE",
+                          "APE",
+                          "CBL",
+                          "PK",
+                          "8",
+                          "9",
+                          "200",
+                          "201",
+                          "202",
+                          "203",
+                          "204",
+                          "210",
+                          "211",
+                          "212",
+                          "AE",
+                          "APE",
+                          "AT",
+                          "BA",
+                          "BC",
+                          "BE",
+                          "BG",
+                          "BGE",
+                          "BJ",
+                          "BL",
+                          "BME",
+                          "BN",
+                          "BO",
+                          "BR",
+                          "BS",
+                          "BU",
+                          "BX",
+                          "CA",
+                          "CBL",
+                          "CCE",
+                          "CHB",
+                          "CHC",
+                          "CR",
+                          "CS",
+                          "CT",
+                          "CU",
+                          "CWH",
+                          "CX",
+                          "DPE",
+                          "DR",
+                          "202",
+                          "BME",
+                          "BX",
+                          "CS",
+                          "DPE",
+                          "MPE",
+                          "RO",
+                          "SW",
+                          "TY",
+                          "9",
+                          "BE",
+                          "CWH",
+                          "FP",
+                          "FPE",
+                          "HR",
+                          "ICA",
+                          "JC",
+                          "JG",
+                          "JR",
+                          "JT",
+                          "JY",
+                          "LG",
+                          "MPE",
+                          "NE",
+                          "OPE",
+                          "PC",
+                          "PG",
+                          "PK",
+                          "PLP",
+                          "PMA",
+                          "PMB",
+                          "PPE",
+                          "PU",
+                          "RCA",
+                          "RG",
+                          "RL",
+                          "RO",
+                          "SA",
+                          "SH",
+                          "SL",
+                          "STE",
+                          "STL",
+                          "SW",
+                          "TAE",
+                          "TB",
+                          "THE",
+                          "TRE",
+                          "TTE",
+                          "TU",
+                          "TWE",
+                          "TY",
+                          "VP"
+                        ]
+                      },
+                      "measurementPackage": {
+                        "type": "object",
+                        "required": [
+                          "measurementApplication",
+                          "measureUnitQualifier"
+                        ],
+                        "properties": {
+                          "measurementApplication": {
+                            "type": "string",
+                            "description": "MEA_6311",
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "maxLength": 3,
+                            "enum": [
+                              "PD",
+                              "WT"
+                            ]
+                          },
+                          "measurementValue": {
+                            "type": "string",
+                            "description": "MEA_C174_6314",
+                            "enum": [
+                              "WT"
+                            ]
+                          },
+                          "measureUnitQualifier": {
+                            "type": "string",
+                            "description": "MEA_C174_6411",
+                            "maxLength": 3
+                          }
+                        }
+                      },
+                      "numberPackages": {
+                        "type": "number",
+                        "maximum": 99999999,
+                        "description": "PAC_7224"
+                      },
+                      "packageIdentification": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "markingInstructions"
+                          ],
+                          "properties": {
+                            "markingInstructions": {
+                              "type": "string",
+                              "description": "PCI_4233",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "enum": [
+                                "10",
+                                "14",
+                                "1",
+                                "2",
+                                "3",
+                                "6",
+                                "7",
+                                "8",
+                                "17",
+                                "16",
+                                "31E"
+                              ]
+                            },
+                            "shippingmarks1": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks10": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks2": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks3": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks4": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks5": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks6": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks7": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks8": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "shippingmarks9": {
+                              "type": "string",
+                              "description": "PCI_C210_7102",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            }
+                          }
+                        }
+                      },
+                      "packagePayment": {
+                        "type": "string",
+                        "description": "PAC_C532_8395",
+                        "maxLength": 3,
+                        "enum": [
+                          "1",
+                          "2"
+                        ]
+                      },
+                      "packagingInformation": {
+                        "type": "string",
+                        "description": "PAC_7233",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3
+                      },
+                      "packagingLevelCoded": {
+                        "type": "string",
+                        "description": "PAC_C531_7075",
+                        "maxLength": 3,
+                        "enum": [
+                          "1",
+                          "3"
+                        ]
+                      },
+                      "packagingTerms": {
+                        "type": "string",
+                        "description": "PAC_C531_7073",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3
+                      },
+                      "quantityPack": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "quantity",
+                            "quantityQualifier"
+                          ],
+                          "properties": {
+                            "quantity": {
+                              "type": "number",
+                              "description": "QTY_C186_6060"
+                            },
+                            "quantityQualifier": {
+                              "type": "string",
+                              "description": "QTY_C186_6063",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3,
+                              "enum": [
+                                "21",
+                                "192",
+                                "37E",
+                                "59",
+                                "2",
+                                "26",
+                                "1",
+                                "193",
+                                "113",
+                                "52",
+                                "127",
+                                "64",
+                                "48",
+                                "185",
+                                "88",
+                                "106",
+                                "189",
+                                "91",
+                                "164",
+                                "17E",
+                                "246",
+                                "45E",
+                                "52"
+                              ]
+                            },
+                            "quantityUnitCode": {
+                              "type": "string",
+                              "description": "QTY_C186_6411",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "enum": [
+                                "KGM",
+                                "PND",
+                                "59",
+                                "PF",
+                                "NAR",
+                                "CEL",
+                                "CMT",
+                                "MGM",
+                                "MMT",
+                                "MTR",
+                                "AMT",
+                                "CMQ",
+                                "MLT",
+                                "LTR",
+                                "1",
+                                "2",
+                                "3",
+                                "4",
+                                "ACR",
+                                "APX",
+                                "ASM",
+                                "ASV",
+                                "BTU",
+                                "C0",
+                                "CMK",
+                                "DAY",
+                                "DMT",
+                                "EA",
+                                "FAH",
+                                "FOT",
+                                "GJO",
+                                "GLI",
+                                "GRM",
+                                "GWH",
+                                "HLT",
+                                "HUR",
+                                "INH",
+                                "JOU",
+                                "KBA",
+                                "KEL",
+                                "KHZ",
+                                "KJO",
+                                "KMT",
+                                "KVT",
+                                "KWH",
+                                "KWT",
+                                "LNE",
+                                "MAL",
+                                "MAW",
+                                "MHZ",
+                                "MIN",
+                                "MTK",
+                                "MTQ",
+                                "MWH",
+                                "NRL",
+                                "ONZ",
+                                "OZA",
+                                "OZI",
+                                "P1",
+                                "PCE",
+                                "PGE",
+                                "PPM",
+                                "PTI",
+                                "PTN",
+                                "QAN",
+                                "QTI",
+                                "RTO",
+                                "SEC",
+                                "ST",
+                                "TNE",
+                                "VLT",
+                                "WHR",
+                                "WRD",
+                                "WTT",
+                                "YRD"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "typeDescription": {
+                        "type": "string",
+                        "description": "PAC_C202_7064",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "typePackages": {
+                        "type": "string",
+                        "description": "PAC_C202_7065",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "NE",
+                          "BG",
+                          "BO",
+                          "CA",
+                          "CX",
+                          "HR",
+                          "PU",
+                          "SA",
+                          "TU",
+                          "STE",
+                          "APE",
+                          "CBL",
+                          "PK",
+                          "8",
+                          "9",
+                          "200",
+                          "201",
+                          "202",
+                          "203",
+                          "204",
+                          "210",
+                          "211",
+                          "212",
+                          "AE",
+                          "APE",
+                          "AT",
+                          "BA",
+                          "BC",
+                          "BE",
+                          "BG",
+                          "BGE",
+                          "BJ",
+                          "BL",
+                          "BME",
+                          "BN",
+                          "BO",
+                          "BR",
+                          "BS",
+                          "BU",
+                          "BX",
+                          "CA",
+                          "CBL",
+                          "CCE",
+                          "CHB",
+                          "CHC",
+                          "CR",
+                          "CS",
+                          "CT",
+                          "CU",
+                          "CWH",
+                          "CX",
+                          "DPE",
+                          "DR",
+                          "202",
+                          "BME",
+                          "BX",
+                          "CS",
+                          "DPE",
+                          "MPE",
+                          "RO",
+                          "SW",
+                          "TY",
+                          "9",
+                          "BE",
+                          "CWH",
+                          "FP",
+                          "FPE",
+                          "HR",
+                          "ICA",
+                          "JC",
+                          "JG",
+                          "JR",
+                          "JT",
+                          "JY",
+                          "LG",
+                          "MPE",
+                          "NE",
+                          "OPE",
+                          "PC",
+                          "PG",
+                          "PK",
+                          "PLP",
+                          "PMA",
+                          "PMB",
+                          "PPE",
+                          "PU",
+                          "RCA",
+                          "RG",
+                          "RL",
+                          "RO",
+                          "SA",
+                          "SH",
+                          "SL",
+                          "STE",
+                          "STL",
+                          "SW",
+                          "TAE",
+                          "TB",
+                          "THE",
+                          "TRE",
+                          "TTE",
+                          "TU",
+                          "TWE",
+                          "TY",
+                          "VP"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "partyDetails": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "partyIdentifier",
+                      "partyQualifier",
+                      "street1"
+                    ],
+                    "properties": {
+                      "cityName": {
+                        "type": "string",
+                        "description": "NAD_3164",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "codeListAgency": {
+                        "type": "string",
+                        "description": "FTX_3055",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "9",
+                          "16",
+                          "14",
+                          "775"
+                        ]
+                      },
+                      "countryCoded": {
+                        "type": "string",
+                        "description": "NAD_3207",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3
+                      },
+                      "countryIdentification": {
+                        "type": "string",
+                        "description": "NAD_C819_3229",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 9
+                      },
+                      "locationParty": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "locationQualifier"
+                          ],
+                          "properties": {
+                            "locationIdentification": {
+                              "type": "string",
+                              "description": "LOC_C517_3225",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 25
+                            },
+                            "locationQualifier": {
+                              "type": "string",
+                              "description": "LOC_3227",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3,
+                              "enum": [
+                                "1",
+                                "7",
+                                "18",
+                                "20",
+                                "27",
+                                "80",
+                                "83",
+                                "ZZZ"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "partyIdentifier": {
+                        "type": "string",
+                        "description": "NAD_C082_3039",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "partyName1": {
+                        "type": "string",
+                        "description": "NAD_C080_3036",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "partyName2": {
+                        "type": "string",
+                        "description": "NAD_C080_3036",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "partyName3": {
+                        "type": "string",
+                        "description": "NAD_C080_3036",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "partyName4": {
+                        "type": "string",
+                        "description": "NAD_C080_3036",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "partyName5": {
+                        "type": "string",
+                        "description": "NAD_C080_3036",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "partyQualifier": {
+                        "type": "string",
+                        "description": "NAD_3035",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "BT",
+                          "CA",
+                          "CB",
+                          "FR",
+                          "GG",
+                          "IM",
+                          "IV",
+                          "ITO",
+                          "OB",
+                          "PD",
+                          "PH",
+                          "SG",
+                          "SF",
+                          "SN",
+                          "ST",
+                          "UD",
+                          "WH"
+                        ]
+                      },
+                      "postCode": {
+                        "type": "string",
+                        "description": "NAD_3251",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 17
+                      },
+                      "street1": {
+                        "type": "string",
+                        "description": "NAD_C059_3042",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "street2": {
+                        "type": "string",
+                        "description": "NAD_C059_3042",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "street3": {
+                        "type": "string",
+                        "description": "NAD_C059_3042",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "street4": {
+                        "type": "string",
+                        "description": "NAD_C059_3042",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      }
+                    }
+                  }
+                },
+                "percentageDetails": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "percentageQualifier"
+                    ],
+                    "properties": {
+                      "percentage": {
+                        "type": "number",
+                        "description": "PCD_C501_5482"
+                      },
+                      "percentageQualifier": {
+                        "type": "string",
+                        "description": "PCD_C501_5245",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "7",
+                          "12"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "priceDetails": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "price",
+                      "priceQualifier"
+                    ],
+                    "properties": {
+                      "currencyPrice": {
+                        "type": "object",
+                        "required": [
+                          "currencyCoded2"
+                        ],
+                        "properties": {
+                          "currencyCoded1": {
+                            "type": "string",
+                            "description": "CUX_C504_6345",
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "maxLength": 3,
+                            "enum": [
+                              "ARS",
+                              "ATS",
+                              "AUD",
+                              "BEF",
+                              "BGL",
+                              "BOB",
+                              "BRL",
+                              "CAD",
+                              "CHF",
+                              "CLP",
+                              "CNY",
+                              "COP",
+                              "CRC",
+                              "CUP",
+                              "CYP",
+                              "CZK",
+                              "DEM",
+                              "DKK",
+                              "DOP",
+                              "DZD",
+                              "ECS",
+                              "EEK",
+                              "EGP",
+                              "ESP",
+                              "EUR",
+                              "FIM",
+                              "FRF",
+                              "GBP",
+                              "GRD",
+                              "GTQ",
+                              "HKD",
+                              "HNL",
+                              "HRD",
+                              "HUF",
+                              "IDR",
+                              "IEP",
+                              "ILS",
+                              "INR",
+                              "IOD",
+                              "IRR",
+                              "ISK",
+                              "ITL",
+                              "JOD",
+                              "JPY",
+                              "KPW",
+                              "KWD",
+                              "LKR",
+                              "LTL",
+                              "LUF",
+                              "LVL",
+                              "MAD",
+                              "MTL",
+                              "MXN",
+                              "MXP",
+                              "MYR",
+                              "NAD",
+                              "NIO",
+                              "NLG",
+                              "NOK",
+                              "NZD",
+                              "PAB",
+                              "PEN",
+                              "PHP",
+                              "PKR",
+                              "PLZ",
+                              "PTE",
+                              "PYG",
+                              "ROL",
+                              "RUR",
+                              "SAR",
+                              "SEK",
+                              "SGD",
+                              "SIT",
+                              "SKK",
+                              "SVC",
+                              "THB",
+                              "TND",
+                              "TRL",
+                              "TWD",
+                              "USD",
+                              "UYU",
+                              "VEB",
+                              "XEU",
+                              "YUN",
+                              "ZAR"
+                            ]
+                          },
+                          "currencyCoded2": {
+                            "type": "string",
+                            "description": "CUX_C504_6345",
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "maxLength": 3,
+                            "enum": [
+                              "ARS",
+                              "ATS",
+                              "AUD",
+                              "BEF",
+                              "BGL",
+                              "BOB",
+                              "BRL",
+                              "CAD",
+                              "CHF",
+                              "CLP",
+                              "CNY",
+                              "COP",
+                              "CRC",
+                              "CUP",
+                              "CYP",
+                              "CZK",
+                              "DEM",
+                              "DKK",
+                              "DOP",
+                              "DZD",
+                              "ECS",
+                              "EEK",
+                              "EGP",
+                              "ESP",
+                              "EUR",
+                              "FIM",
+                              "FRF",
+                              "GBP",
+                              "GRD",
+                              "GTQ",
+                              "HKD",
+                              "HNL",
+                              "HRD",
+                              "HUF",
+                              "IDR",
+                              "IEP",
+                              "ILS",
+                              "INR",
+                              "IOD",
+                              "IRR",
+                              "ISK",
+                              "ITL",
+                              "JOD",
+                              "JPY",
+                              "KPW",
+                              "KWD",
+                              "LKR",
+                              "LTL",
+                              "LUF",
+                              "LVL",
+                              "MAD",
+                              "MTL",
+                              "MXN",
+                              "MXP",
+                              "MYR",
+                              "NAD",
+                              "NIO",
+                              "NLG",
+                              "NOK",
+                              "NZD",
+                              "PAB",
+                              "PEN",
+                              "PHP",
+                              "PKR",
+                              "PLZ",
+                              "PTE",
+                              "PYG",
+                              "ROL",
+                              "RUR",
+                              "SAR",
+                              "SEK",
+                              "SGD",
+                              "SIT",
+                              "SKK",
+                              "SVC",
+                              "THB",
+                              "TND",
+                              "TRL",
+                              "TWD",
+                              "USD",
+                              "UYU",
+                              "VEB",
+                              "XEU",
+                              "YUN",
+                              "ZAR"
+                            ]
+                          },
+                          "currencyQualifier1": {
+                            "type": "string",
+                            "description": "CUX_C504_6343",
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "maxLength": 3,
+                            "enum": [
+                              "4",
+                              "9",
+                              "11"
+                            ]
+                          },
+                          "currencyQualifier2": {
+                            "type": "string",
+                            "description": "CUX_C504_6343",
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "maxLength": 3,
+                            "enum": [
+                              "4",
+                              "9",
+                              "11"
+                            ]
+                          },
+                          "currencyUse1": {
+                            "type": "string",
+                            "description": "CUX_C504_6347",
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "maxLength": 3,
+                            "enum": [
+                              "2"
+                            ]
+                          },
+                          "currencyUse2": {
+                            "type": "string",
+                            "description": "CUX_C504_6347",
+                            "pattern": "^[a-zA-Z0-9]*$",
+                            "maxLength": 3,
+                            "enum": [
+                              "3"
+                            ]
+                          },
+                          "rateExchange": {
+                            "type": "number",
+                            "description": "CUX_5402",
+                            "maxLength": 12
+                          }
+                        }
+                      },
+                      "price": {
+                        "type": "number",
+                        "description": "PRI_C509_5118"
+                      },
+                      "priceQualifier": {
+                        "type": "string",
+                        "description": "PRI_C509_5125",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "AAA",
+                          "AAB",
+                          "AAC",
+                          "AAE",
+                          "AAF",
+                          "AAH",
+                          "AAQ",
+                          "ABL",
+                          "ABM",
+                          "INF",
+                          "NE"
+                        ]
+                      },
+                      "priceType": {
+                        "type": "string",
+                        "description": "PRI_C509_5375",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "CA",
+                          "CT",
+                          "LBL",
+                          "LIU",
+                          "NTP",
+                          "PE",
+                          "PRP",
+                          "RTP"
+                        ]
+                      },
+                      "priceTypeQualifier": {
+                        "type": "string",
+                        "description": "PRI_C509_5387",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "AAF",
+                          "AAE",
+                          "ALT",
+                          "CON",
+                          "CP",
+                          "DPR",
+                          "EUP",
+                          "INV",
+                          "LBL",
+                          "LIU",
+                          "NTP",
+                          "PRP",
+                          "RES",
+                          "RTP",
+                          "SRP"
+                        ]
+                      },
+                      "quantityUnitCode": {
+                        "type": "string",
+                        "description": "PRI_C509_6411",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3
+                      },
+                      "unitPriceBasis": {
+                        "type": "number",
+                        "description": "PRI_C509_5284",
+                        "maxLength": 16
+                      }
+                    }
+                  }
+                },
+                "quantityDetails": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "quantity",
+                      "quantityQualifier"
+                    ],
+                    "properties": {
+                      "quantity": {
+                        "type": "number",
+                        "description": "QTY_C186_6060"
+                      },
+                      "quantityQualifier": {
+                        "type": "string",
+                        "description": "QTY_C186_6063",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "1",
+                          "2",
+                          "17E",
+                          "21",
+                          "26",
+                          "37E",
+                          "45E",
+                          "48",
+                          "52",
+                          "59",
+                          "64",
+                          "88",
+                          "91",
+                          "106",
+                          "113",
+                          "127",
+                          "164",
+                          "185",
+                          "189",
+                          "192",
+                          "193",
+                          "246"
+                        ]
+                      },
+                      "quantityUnitCode": {
+                        "type": "string",
+                        "description": "QTY_C186_6411",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "KGM",
+                          "PND",
+                          "59",
+                          "PF",
+                          "NAR",
+                          "CEL",
+                          "CMT",
+                          "MGM",
+                          "MMT",
+                          "MTR",
+                          "AMT",
+                          "CMQ",
+                          "MLT",
+                          "LTR",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "ACR",
+                          "APX",
+                          "ASM",
+                          "ASV",
+                          "BTU",
+                          "C0",
+                          "CMK",
+                          "DAY",
+                          "DMT",
+                          "EA",
+                          "FAH",
+                          "FOT",
+                          "GJO",
+                          "GLI",
+                          "GRM",
+                          "GWH",
+                          "HLT",
+                          "HUR",
+                          "INH",
+                          "JOU",
+                          "KBA",
+                          "KEL",
+                          "KHZ",
+                          "KJO",
+                          "KMT",
+                          "KVT",
+                          "KWH",
+                          "KWT",
+                          "LNE",
+                          "MAL",
+                          "MAW",
+                          "MHZ",
+                          "MIN",
+                          "MTK",
+                          "MTQ",
+                          "MWH",
+                          "NRL",
+                          "ONZ",
+                          "OZA",
+                          "OZI",
+                          "P1",
+                          "PCE",
+                          "PGE",
+                          "PPM",
+                          "PTI",
+                          "PTN",
+                          "QAN",
+                          "QTI",
+                          "RTO",
+                          "SEC",
+                          "ST",
+                          "TNE",
+                          "VLT",
+                          "WHR",
+                          "WRD",
+                          "WTT",
+                          "YRD"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "quantityVariances": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "qualifierDifference",
+                      "quantityDifference"
+                    ],
+                    "properties": {
+                      "codeDiscrepancy": {
+                        "type": "string",
+                        "description": "QVR_4221",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3
+                      },
+                      "qualifierDifference": {
+                        "type": "string",
+                        "description": "QVR_C279_6063",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "21"
+                        ]
+                      },
+                      "quantityDifference": {
+                        "type": "number",
+                        "maximum": 15,
+                        "description": "QVR_C279_6064"
+                      }
+                    }
+                  }
+                },
+                "referenceDetails": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "dateTimeReference": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "dateTimeReference"
+                          ],
+                          "properties": {
+                            "dateTimeFormatQualifier": {
+                              "type": "string",
+                              "description": "DTM_C507_2379",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3,
+                              "enum": [
+                                "102",
+                                "106",
+                                "109",
+                                "203",
+                                "616",
+                                "718"
+                              ]
+                            },
+                            "date": {
+                              "type": "string",
+                              "description": "DTM_C507_2380",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 35
+                            },
+                            "dateTimeReference": {
+                              "type": "string",
+                              "description": "DTM_C507_2005",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3
+                            }
+                          }
+                        }
+                      },
+                      "lineNumber": {
+                        "type": "string",
+                        "description": "RFF_C506_1156",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 6
+                      },
+                      "referenceQualifier": {
+                        "type": "string",
+                        "description": "RFF_C506_1153",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "AAG",
+                          "AAL",
+                          "AAN",
+                          "AAO",
+                          "ABH",
+                          "ABO",
+                          "ACD",
+                          "ACE",
+                          "ADA",
+                          "ADD",
+                          "AFF",
+                          "AFZ",
+                          "AGM",
+                          "AGW",
+                          "AHP",
+                          "ALT",
+                          "ALX",
+                          "APH",
+                          "ARP",
+                          "BO",
+                          "CO",
+                          "COF",
+                          "CP",
+                          "CR",
+                          "CS",
+                          "CT",
+                          "EA",
+                          "FC",
+                          "GC",
+                          "GN",
+                          "IA",
+                          "IP",
+                          "LI",
+                          "NNN",
+                          "ON",
+                          "PD",
+                          "PE",
+                          "PL",
+                          "PS",
+                          "PW",
+                          "SD",
+                          "VA",
+                          "VAT",
+                          "VN",
+                          "VR",
+                          "VS",
+                          "ZZZ"
+                        ]
+                      },
+                      "referenceVersionNumber": {
+                        "type": "string",
+                        "description": "RFF_C506_4000",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      }
+                    }
+                  }
+                },
+                "relatedIdentification": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "setIdentification"
+                    ],
+                    "properties": {
+                      "identityNumber1": {
+                        "type": "string",
+                        "description": "GIN_7402",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "identityNumber2": {
+                        "type": "string",
+                        "description": "GIN_7402",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "identityNumber3": {
+                        "type": "string",
+                        "description": "GIN_7402",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 35
+                      },
+                      "setIdentification": {
+                        "type": "string",
+                        "description": "GIR_7297",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "1",
+                          "8"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "schedulingConditions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "deliveryPlan"
+                    ],
+                    "properties": {
+                      "deliveryPlan": {
+                        "type": "string",
+                        "description": "SCC_4017",
+                        "pattern": "^[a-zA-Z0-9]*$",
+                        "maxLength": 3,
+                        "enum": [
+                          "1",
+                          "4"
+                        ]
+                      },
+                      "quantityScheduling": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "dateScheduling": {
+                              "type": "object",
+                              "required": [
+                                "dateTimeFormatQualifier",
+                                "deliveryDateQualifier"
+                              ],
+                              "properties": {
+                                "dateTimeFormatQualifier": {
+                                  "type": "string",
+                                  "description": "DTM_C507_2379",
+                                  "pattern": "^[a-zA-Z0-9]*$",
+                                  "maxLength": 3,
+                                  "enum": [
+                                    "102",
+                                    "106",
+                                    "109",
+                                    "203",
+                                    "616",
+                                    "718"
+                                  ]
+                                },
+                                "deliveryDateQualifier": {
+                                  "type": "string",
+                                  "description": "DTM_C507_2005",
+                                  "pattern": "^[a-zA-Z0-9]*$",
+                                  "maxLength": 3
+                                },
+                                "deliveryDateRequested": {
+                                  "type": "string",
+                                  "description": "DTM_C507_2380",
+                                  "pattern": "^[a-zA-Z0-9]*$",
+                                  "maxLength": 35
+                                }
+                              }
+                            },
+                            "quantity": {
+                              "type": "number",
+                              "description": "QTY_C506_6060"
+                            },
+                            "quantityQualifier": {
+                              "type": "number",
+                              "description": "QTY_C506_6063",
+                              "enum": [
+                                "1",
+                                "2",
+                                "17E",
+                                "21",
+                                "26",
+                                "37E",
+                                "45E",
+                                "48",
+                                "52",
+                                "59",
+                                "64",
+                                "88",
+                                "91",
+                                "106",
+                                "113",
+                                "127",
+                                "164",
+                                "185",
+                                "189",
+                                "192",
+                                "193",
+                                "246"
+                              ]
+                            },
+                            "quantityUnitCode": {
+                              "type": "string",
+                              "description": "QTY_C506_6411",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3,
+                              "enum": [
+                                "KGM",
+                                "PND",
+                                "59",
+                                "PF",
+                                "NAR",
+                                "CEL",
+                                "CMT",
+                                "MGM",
+                                "MMT",
+                                "MTR",
+                                "AMT",
+                                "CMQ",
+                                "MLT",
+                                "LTR",
+                                "1",
+                                "2",
+                                "3",
+                                "4",
+                                "ACR",
+                                "APX",
+                                "ASM",
+                                "ASV",
+                                "BTU",
+                                "C0",
+                                "CMK",
+                                "DAY",
+                                "DMT",
+                                "EA",
+                                "FAH",
+                                "FOT",
+                                "GJO",
+                                "GLI",
+                                "GRM",
+                                "GWH",
+                                "HLT",
+                                "HUR",
+                                "INH",
+                                "JOU",
+                                "KBA",
+                                "KEL",
+                                "KHZ",
+                                "KJO",
+                                "KMT",
+                                "KVT",
+                                "KWH",
+                                "KWT",
+                                "LNE",
+                                "MAL",
+                                "MAW",
+                                "MHZ",
+                                "MIN",
+                                "MTK",
+                                "MTQ",
+                                "MWH",
+                                "NRL",
+                                "ONZ",
+                                "OZA",
+                                "OZI",
+                                "P1",
+                                "PCE",
+                                "PGE",
+                                "PPM",
+                                "PTI",
+                                "PTN",
+                                "QAN",
+                                "QTI",
+                                "RTO",
+                                "SEC",
+                                "ST",
+                                "TNE",
+                                "VLT",
+                                "WHR",
+                                "WRD",
+                                "WTT",
+                                "YRD"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "referenceScheduling": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "referenceQualifier"
+                          ],
+                          "properties": {
+                            "referenceNumber": {
+                              "type": "string",
+                              "description": "RFF_C506_1154",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 70
+                            },
+                            "referenceQualifier": {
+                              "type": "string",
+                              "description": "RFF_C506_1153",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3,
+                              "enum": [
+                                "AAG",
+                                "AAL",
+                                "AAN",
+                                "AAO",
+                                "ABH",
+                                "ABO",
+                                "ACD",
+                                "ACE",
+                                "ADA",
+                                "ADD",
+                                "AFF",
+                                "AFZ",
+                                "AGM",
+                                "AGW",
+                                "AHP",
+                                "ALT",
+                                "ALX",
+                                "APH",
+                                "ARP",
+                                "BO",
+                                "CO",
+                                "COF",
+                                "CP",
+                                "CR",
+                                "CS",
+                                "CT",
+                                "EA",
+                                "FC",
+                                "GC",
+                                "GN",
+                                "IA",
+                                "IP",
+                                "LI",
+                                "NNN",
+                                "ON",
+                                "PD",
+                                "PE",
+                                "PL",
+                                "PS",
+                                "PW",
+                                "SD",
+                                "VA",
+                                "VAT",
+                                "VN",
+                                "VR",
+                                "VS",
+                                "ZZZ"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "schedulingFreeText": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "freeText1",
+                            "textFreeQualifier"
+                          ],
+                          "properties": {
+                            "freeText1": {
+                              "type": "string",
+                              "description": "FTX_C108_4440",
+                              "maxLength": 512
+                            },
+                            "freeText2": {
+                              "type": "string",
+                              "description": "FTX_C108_4440",
+                              "maxLength": 512
+                            },
+                            "freeText3": {
+                              "type": "string",
+                              "description": "FTX_C108_4440",
+                              "maxLength": 512
+                            },
+                            "freeText4": {
+                              "type": "string",
+                              "description": "FTX_C108_4440",
+                              "maxLength": 512
+                            },
+                            "freeText5": {
+                              "type": "string",
+                              "description": "FTX_C108_4440",
+                              "maxLength": 512
+                            },
+                            "textFreeQualifier": {
+                              "type": "string",
+                              "description": "FTX_4451",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "subLineIndicator": {
+                  "type": "string",
+                  "description": "LIN_C829_5495",
+                  "pattern": "^[a-zA-Z0-9]*$",
+                  "maxLength": 3
                 }
               }
             }
