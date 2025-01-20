@@ -246,7 +246,68 @@
           "messageTypeReleaseNumber": "96A",
           "controllingAgency": "UN",
           "associationAssignedCode": "EAN010"
-        }
+        },
+        ,
+        "party": [
+          {
+            "partyQualifier": "IV",
+            "partyIdentifier": "7701008100015",
+            "codeListAgency": "9",
+            "cityName": "1111111111111111111111111111111",
+            "contactInformation": [
+              {
+                "contactFunction": "PD",
+                "departmentIdentification": "123456",
+                "department": "Departamento"
+              }
+            ]
+          },
+          {
+            "partyQualifier": "IV",
+            "partyIdentifier": "7701008100015",
+            "codeListAgency": "9"
+          },
+          {
+            "partyQualifier": "IV",
+            "partyIdentifier": "7702398000015",
+            "codeListAgency": "9",
+            "nameAndAddress1": "Evergreen st.",
+            "cityName": "Springfield"
+          },
+          {
+            "partyQualifier": "IV",
+            "partyIdentifier": "7701008006867",
+            "codeListAgency": "9"
+          },
+          {
+            "partyQualifier": "SN",
+            "partyIdentifier": "7701008006867",
+            "codeListAgency": "9"
+          },
+          {
+            "partyQualifier": "ITO",
+            "partyIdentifier": "7701008006867",
+            "codeListAgency": "9"
+          },
+          {
+            "partyQualifier": "WH",
+            "partyIdentifier": "77038344345Adicional",
+            "partyReference": [
+              {
+                "referenceQualifier": "VA",
+                "referenceNumber": "12344NoIdentificacionT",
+                "dateReference": [
+                  {
+                    "dateReferenceQualifier": "2",
+                    "date": "12-12-12",
+                    "dateTimeFormatQualifier": "102"
+                  }
+                ],
+                "lineNumber": "12"
+              }
+            ]
+          }
+        ]
       }
     }
   ]

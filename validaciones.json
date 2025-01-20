@@ -4284,6 +4284,415 @@
                     }
                   }
                 }
+              },
+              ,
+              "party": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "partyQualifier"
+                  ],
+                  "properties": {
+                    "partyQualifier": {
+                      "description": "NAD_3035",
+                      "type": "string",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "enum": [
+                        "SN",
+                        "SG",
+                        "IV",
+                        "ITO",
+                        "WH",
+                        "GG",
+                        "ST",
+                        "CA",
+                        "BT",
+                        "FR",
+                        "PH",
+                        "PD",
+                        "SF",
+                        "OB",
+                        "IM",
+                        "CB",
+                        "UD"
+                      ]
+                    },
+                    "partyIdentifier": {
+                      "description": "NAD_C082_3039",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "codeListQualifier": {
+                      "description": "NAD_C082_1131",
+                      "type": "string",
+                      "maxLength": 17,
+                      "enum": [
+                        "92",
+                        "46"
+                      ]
+                    },
+                    "codeListAgency": {
+                      "description": "NAD_C082_3055",
+                      "type": "string",
+                      "maxLength": 3,
+                      "enum": [
+                        "9",
+                        "92",
+                        "14"
+                      ]
+                    },
+                    "nameAndAddress1": {
+                      "description": "NAD_C058_3124",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "nameAndAddress2": {
+                      "description": "NAD_C058_3124",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "nameAndAddress3": {
+                      "description": "NAD_C058_3124",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "nameAndAddress4": {
+                      "description": "NAD_C058_3124",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "nameAndAddress5": {
+                      "description": "NAD_C058_3124",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "nameAndAddress6": {
+                      "description": "NAD_C058_3124",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "partyName1": {
+                      "description": "NAD_C080_3036",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "partyName2": {
+                      "description": "NAD_C080_3036",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "partyName3": {
+                      "description": "NAD_C080_3036",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "partyName4": {
+                      "description": "NAD_C080_3036",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "partyName5": {
+                      "description": "NAD_C080_3036",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "street1": {
+                      "description": "NAD_C059_3042",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "street2": {
+                      "description": "NAD_C059_3042",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "street3": {
+                      "description": "NAD_C059_3042",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "street4": {
+                      "description": "NAD_C059_3042",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "cityName": {
+                      "description": "NAD_3164",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "countryIdentification": {
+                      "description": "NAD_C819_3229",
+                      "type": "string",
+                      "maxLength": 25
+                    },
+                    "postCode": {
+                      "description": "NAD_251",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "countryCoded": {
+                      "description": "NAD_3207",
+                      "type": "string",
+                      "maxLength": 15
+                    },
+                    "partyLocationIdentification": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locationQualifier": {
+                            "description": "LOC_3227",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 3,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "enum": [
+                              "1",
+                              "7",
+                              "18",
+                              "20",
+                              "27",
+                              "80",
+                              "83",
+                              "ZZZ"
+                            ]
+                          },
+                          "locIdentification": {
+                            "type": "string",
+                            "maxLength": 25
+                          },
+                          "codeLlistLocation": {
+                            "description": "LOC_C517_3225",
+                            "type": "string",
+                            "maxLength": 3,
+                            "enum": [
+                              "",
+                              "9",
+                              "86"
+                            ]
+                          },
+                          "location": {
+                            "description": "LOC_C517_3224",
+                            "type": "string",
+                            "maxLength": 256
+                          }
+                        },
+                        "required": [
+                          "locationQualifier"
+                        ]
+                      }
+                    },
+                    "partyReference": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "referenceQualifier": {
+                            "description": "RFF_C506_1153",
+                            "type": "string",
+                            "maxLength": 3,
+                            "minLength": 1,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "enum": [
+                              "AAG",
+                              "AAL",
+                              "AAN",
+                              "AAO",
+                              "ABH",
+                              "ABO",
+                              "ACD",
+                              "ACE",
+                              "ADA",
+                              "ADD",
+                              "AFF",
+                              "AFZ",
+                              "AGM",
+                              "AGW",
+                              "AHP",
+                              "ALT",
+                              "ALX",
+                              "APH",
+                              "ARP",
+                              "BO",
+                              "CO",
+                              "COF",
+                              "CP",
+                              "CR",
+                              "CS",
+                              "CT",
+                              "EA",
+                              "FC",
+                              "GC",
+                              "GN",
+                              "IA",
+                              "IP",
+                              "LI",
+                              "NNN",
+                              "ON",
+                              "PD",
+                              "PE",
+                              "PL",
+                              "PS",
+                              "PW",
+                              "SD",
+                              "VA",
+                              "VAT",
+                              "VN",
+                              "VR",
+                              "VS",
+                              "ZZZ"
+                            ]
+                          },
+                          "referenceNumber": {
+                            "description": "RFF_C506_1154",
+                            "type": "string",
+                            "maxLength": 70,
+                            "minLength": 1
+                          },
+                          "lineNumber": {
+                            "description": "RFF_C506_1156",
+                            "type": "string",
+                            "maxLength": 6,
+                            "minLength": 1
+                          },
+                          "dateReference": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "dateReferenceQualifier": {
+                                  "type": "string",
+                                  "maxLength": 3,
+                                  "minLength": 1,
+                                  "pattern": "^[a-zA-Z0-9]+$",
+                                  "enum": [
+                                    "2",
+                                    "171",
+                                    "194",
+                                    "206"
+                                  ],
+                                  "description": "DTM_C507"
+                                },
+                                "date": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 35,
+                                  "description": "DTM_C507_2380"
+                                },
+                                "dateTimeFormatQualifier": {
+                                  "type": "string",
+                                  "maxLength": 3,
+                                  "minLength": 1,
+                                  "pattern": "^[a-zA-Z0-9]+$",
+                                  "enum": [
+                                    "102",
+                                    "203",
+                                    "106",
+                                    "718",
+                                    "109",
+                                    "616"
+                                  ],
+                                  "description": "DTM_C507_2379"
+                                }
+                              },
+                              "required": [
+                                "dateReferenceQualifier",
+                                "date",
+                                "dateTimeFormatQualifier"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "referenceQualifier",
+                          "referenceNumber",
+                          "lineNumber"
+                        ]
+                      }
+                    },
+                    "contactInformation": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "contactFunction": {
+                            "type": "string",
+                            "description": "CTA_3139",
+                            "minLength": 2,
+                            "maxLength": 3,
+                            "pattern": "^[a-zA-Z0-9]+$",
+                            "enum": [
+                              "PD",
+                              "OC",
+                              "AG",
+                              "ODP",
+                              "CC",
+                              "SU",
+                              "AR",
+                              "AP",
+                              "SD",
+                              "TA",
+                              "CA",
+                              "GR",
+                              "AD",
+                              "BJ",
+                              "BO",
+                              "IC"
+                            ]
+                          },
+                          "departmentIdentification": {
+                            "type": "string",
+                            "maxLength": 17,
+                            "description": "CTA_C056_3413"
+                          },
+                          "department": {
+                            "type": "string",
+                            "maxLength": 35,
+                            "description": "CTA_C056_3412"
+                          },
+                          "communicationContact": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "communicationNumber": {
+                                  "type": "string",
+                                  "maxLength": 35,
+                                  "description": "COM_C076_3148",
+                                  "minLength": 1
+                                },
+                                "communicationChannel": {
+                                  "type": "string",
+                                  "enum": [
+                                    "EI",
+                                    "EM",
+                                    "FX",
+                                    "TE",
+                                    "TL",
+                                    "XF"
+                                  ],
+                                  "description": "COM_C076_3155",
+                                  "minLength": 2,
+                                  "maxLength": 3
+                                }
+                              },
+                              "required": [
+                                "communicationNumber",
+                                "communicationChannel"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "contactFunction"
+                        ]
+                      }
+                    }
+                  }
+                }
               }
             }
           }
