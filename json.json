@@ -78,13 +78,13 @@
               ],
               "detailsMonetaryAllowance": [
                 {
-                  "allowanceMonetaryAmount": "012",
+                  "allowanceMonetaryAmount": "22",
                   "monetaryAmountPercentaje": 123456789101112
                 }
               ],
               "detailsPercentageAllowance": [
                 {
-                  "percentageQualifier": "001",
+                  "percentageQualifier": "1",
                   "percentageValueDetailsAllowance": 123456789101112.13,
                   "rangeAllowance": [
                     {
@@ -106,9 +106,10 @@
               "specialServiceDescription2": ""
             }
           ],
-          "codeList": "90",
+          "codeList": "9",
           "codeListAgency": "9",
-          "configurationCoded": "12"
+          "configurationCoded": "I",
+          "lineItemNumber": 123456
         }
       ],
       "summary": {

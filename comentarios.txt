@@ -2,8 +2,13 @@
 -- Cuando el campo no es obligatorio solo se pone maximo.
 -- Cuando el campo tiene enum tener en cuenta los valores para poner el valor maximo y minimo.
 -- El campo de description es obligatorio y se saca de las columnas : Seg., Elem, Sube.
--- La expresion regular de texto es A = "^[a-zA-Z]+$" y para alfanumero es AN = "^[a-zA-Z0-9]*$".
+-- La expresion regular de texto es A = "^[a-zA-Z]+$" y para alfanumero es AN = "^[a-zA-Z0-9 ]*$".
 -- Para los campos numero los valores maximo y minimo se validan con  "minimum": 0, "maximum": 0.
 -- Para los campos de texto largos no poner expresion regular.
 -- Para los campos opcionales se debe garantizar que reciba vacio, si es un enum debe tener "" y no puede llevar la expresion regular.
--- Para los campos opcionales que no llevan enum se debe usar la expresion regular "^[a-zA-Z0-9]*$".
+-- Para los campos opcionales que no llevan enum se debe usar la expresion regular "^[a-zA-Z0-9 ]*$".
+-- los campos tipo N con longitud decimal se deben poner de la sigueinte manera:
+    "type": "number", = Especifica que el campo debe ser un número, no una cadena.
+    "minimum": 0, = Define el valor mínimo permitido (puedes cambiarlo si se permiten números negativos).
+    "maximum": 999999999999999.99999, = Define el valor máximo permitido, que es el mayor número con 15 dígitos enteros y 5 decimales.
+    "multipleOf": 0.00001 = Asegura que el número tenga un máximo de 5 decimales, ya que los múltiplos de 0.00001 cumplen con esta condición.
