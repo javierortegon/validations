@@ -1,314 +1,396 @@
 {
-  "interchangeHeader": {
-    "syntaxIdentifier": "UNOA",
-    "syntaxVersionNumber": 2,
-    "senderIdentification": "7701008100015",
-    "partnerIdentificationCodeQualifier": "14",
-    "recipientIdentification": "7702398000015",
-    "recipientIdentificationCodeQualifier": "14",
-    "recipientIdentificationCodeCountry": "CO",
-    "date": "240307",
-    "time": "1128",
-    "interchangeControlReference": "TS3195125",
-    "password": "123456",
-    "applicationReference": "ORDERS",
-    "acknowledgementRequest": 1
-  },
-  "interchangeTrailer": {
-    "interchangeControl": 123456,
-    "interchangeReference": "TS3195125"
-  },
-  "orders": [
-    {
-      "detailsItem": [
+    "interchangeHeader": {
+        "syntaxIdentifier": "UNOA",
+        "syntaxVersionNumber": 2,
+        "senderIdentification": "1007808389",
+        "partnerIdentificationCodeQualifier": "14",
+        "recipientIdentification": "1022000115",
+        "recipientIdentificationCodeQualifier": "14",
+        "recipientIdentificationCodeCountry": "MX",
+        "date": "250218",
+        "time": "1601",
+        "interchangeControlReference": "25021816010275",
+        "password": "",
+        "applicationReference": "ORDERS"
+    },
+    "orders": [
         {
-          "actionNotification": "123",
-          "additionalItemType2": "IZ",
-          "additionalItemType3": "IZ",
-          "additionalItemType4": "IZ",
-          "additionalItemType5": "IZ",
-          "additionalProductId": [
-            {
-              "productIdFunction": "1",
-              "additionalItemType": "AT",
-              "additionalItemNumber": "1151090"
-            },
-            {
-              "productIdFunction": "1",
-              "additionalItemType": "AT",
-              "additionalItemNumber": "8825",
-              "additionalItemNumber2": "8825",
-              "additionalItemNumber3": "8825",
-              "additionalItemNumber4": "8825",
-              "additionalItemNumber5": "8825"
-            },
-            {
-              "productIdFunction": "2",
-              "additionalItemType": "IN",
-              "additionalItemNumber": "48451",
-              "codeList": "92",
-              "codeList2": "9"
-            },
-            {
-              "productIdFunction": "1",
-              "additionalItemType": "GB",
-              "additionalItemNumber": "89153"
-            },
-            {
-              "productIdFunction": "1",
-              "additionalItemType": "AT",
-              "additionalItemNumber": "99999"
-            }
-          ],
-          "allowanceOrChargeDetails": [
-            {
-              "settlementCoded": "1",
-              "codeLlistCoded": "EAB",
-              "specialServicesCoded": "",
-              "allowanceOrChargeNumber": "2",
-              "allowanceOrChargeDescription": "1",
-              "allowanceOrChargeQualifier": "A",
-              "calculationSequenceIndicator": "1",
-              "detailsItemQuantityAllowance": [
-                {
-                  "quantity": 123456789101112.13,
-                  "quantityQualifier": "2",
-                  "quantityUnitCode": "12"
-                }
-              ],
-              "detailsMonetaryAllowance": [
-                {
-                  "allowanceMonetaryAmount": "22",
-                  "monetaryAmountPercentaje": 123456789101112
-                }
-              ],
-              "detailsPercentageAllowance": [
-                {
-                  "percentageQualifier": "1",
-                  "percentageValueDetailsAllowance": 123456789101112.13,
-                  "rangeAllowance": [
+            "header": {
+                "messageHeader": {
+                    "messageReferenceNumber": "1",
+                    "messageTypeIdentifier": "ORDERS",
+                    "messageTypeVersionNumber": "D",
+                    "messageTypeReleaseNumber": "96A",
+                    "controllingAgency": "UN",
+                    "associationAssignedCode": "EAN008"
+                },
+                "beginningOfMessage": [
                     {
-                      "measureUnitQualifier": "CEL",
-                      "rangeMaximumPercentaje": 123456789101112.13,
-                      "rangeMinimumPercentaje": 123456789101112.13,
-                      "rangeType": "1"
+                        "documentNameCode": "220",
+                        "documentId": "90006",
+                        "messageFunction": "9"
                     }
-                  ]
-                }
-              ],
-              "rateDetails": [
-                {
-                  "ratePerUnit": 12345678910.908,
-                  "rateTypeQualifier": "1"
-                }
-              ],
-              "specialServiceDescription": "Special Service",
-              "specialServiceDescription2": ""
-            }
-          ],
-          "codeList": "9",
-          "codeListAgency": "9",
-          "configurationCoded": "I",
-          "lineItemNumber": 123456
-        }
-      ],
-      "summary": {
-        "monetaryAmountSummary": [
-          {
-            "currencySummary": "ARS",
-            "monetaryAmount": 1,
-            "monetaryAmountQualifierSummary": "1"
-          }
-        ],
-        "allowanceOrChargeSummary": [
-          {
-            "allowanceOrChargeNumber": "k",
-            "allowanceOrChargeQualifier": "A22",
-            "monetaryAllowanceSummary": [
-              {
-                "allowanceMonetaryAmount": "13",
-                "monetaryAmountPercentaje": 1
-              }
-            ]
-          }
-        ],
-        "controlTotal": [
-          {
-            "controlQualifier": "1",
-            "controlValue": 12,
-            "measureUnitControl": "MLT"
-          }
-        ],
-        "sectionControl": {
-          "sectionIdentification": "s"
-        },
-        "messageTrailer": {
-          "messageReference": "1",
-          "numberSegments": 2
-        }
-      },
-      "header": {
-        "termsOfDelivery": [
-          {
-            "termsOfDelivery": "1",
-            "termsOfDelivery2": "Y",
-            "termsOfDeliveryCoded": "CAD",
-            "termsOfdeliveryFunction": "3",
-            "transportCharges": "WD",
-            "locationTerms": [
-              {
-                "codeListAgency": "9",
-                "location": "j",
-                "locationQualifier": "1",
-                "locationIdentification": "123"
-              }
-            ]
-          }
-        ],
-        "requirementsConditions": [
-          {
-            "sectorIdentification": "WD",
-            "referenceRequirements": {
-              "referenceNumber": "9",
-              "referenceQualifier": "AAG"
-            }
-          }
-        ],
-        "paymentTerms": [
-          {
-            "codeListAgency": "9",
-            "codeListQualifier": "1",
-            "numberOfPeriods": 30,
-            "paymentTermsIdentification": "6",
-            "paymentTermsQualifier": "9",
-            "paymentTimeReference": "5",
-            "termsOfPayment": "D",
-            "termsOfPayment2": "30",
-            "timeRelation": "3",
-            "typeOfPeriod": "D",
-            "percentagePaymentTerms": [
-              {
-                "percentageBasis": "1",
-                "percentageQualifier": "12",
-                "percentageValuePaymentTerms": 5.0
-              }
-            ],
-            "dateTime": [
-              {
-                "dateTimeQualifier": "63",
-                "date": "202403070000",
-                "dateTimeFormatQualifier": "102"
-              }
-            ]
-          },
-          {
-            "paymentTermsQualifier": "1",
-            "paymentTimeReference": "5",
-            "timeRelation": "3",
-            "typeOfPeriod": "D",
-            "numberOfPeriods": 30,
-            "percentagePaymentTerms": [
-              {
-                "percentageBasis": "1",
-                "percentageQualifier": "12",
-                "percentageValuePaymentTerms": 5.12342
-              }
-            ]
-          },
-          {
-            "paymentTermsQualifier": "1",
-            "paymentTimeReference": "21",
-            "timeRelation": "3",
-            "typeOfPeriod": "D",
-            "numberOfPeriods": 30,
-            "percentagePaymentTerms": [
-              {
-                "percentageBasis": "1",
-                "percentageQualifier": "12",
-                "percentageValuePaymentTerms": 123456.123
-              }
-            ]
-          }
-        ],
-        "paymentInstructions": [
-          {
-            "paymentConditions": "1",
-            "paymentMeans": "42",
-            "paymentGuarantee": "20",
-            "codeList": "12",
-            "paymentChannel": "1"
-          }
-        ],
-        "messageHeader": {
-          "messageReferenceNumber": "1",
-          "messageTypeIdentifier": "ORDERS",
-          "messageTypeVersionNumber": "D",
-          "messageTypeReleaseNumber": "96A",
-          "controllingAgency": "UN",
-          "associationAssignedCode": "EAN010"
-        },
-        ,
-        "party": [
-          {
-            "partyQualifier": "IV",
-            "partyIdentifier": "7701008100015",
-            "codeListAgency": "9",
-            "cityName": "1111111111111111111111111111111",
-            "contactInformation": [
-              {
-                "contactFunction": "PD",
-                "departmentIdentification": "123456",
-                "department": "Departamento"
-              }
-            ]
-          },
-          {
-            "partyQualifier": "IV",
-            "partyIdentifier": "7701008100015",
-            "codeListAgency": "9"
-          },
-          {
-            "partyQualifier": "IV",
-            "partyIdentifier": "7702398000015",
-            "codeListAgency": "9",
-            "nameAndAddress1": "Evergreen st.",
-            "cityName": "Springfield"
-          },
-          {
-            "partyQualifier": "IV",
-            "partyIdentifier": "7701008006867",
-            "codeListAgency": "9"
-          },
-          {
-            "partyQualifier": "SN",
-            "partyIdentifier": "7701008006867",
-            "codeListAgency": "9"
-          },
-          {
-            "partyQualifier": "ITO",
-            "partyIdentifier": "7701008006867",
-            "codeListAgency": "9"
-          },
-          {
-            "partyQualifier": "WH",
-            "partyIdentifier": "77038344345Adicional",
-            "partyReference": [
-              {
-                "referenceQualifier": "VA",
-                "referenceNumber": "12344NoIdentificacionT",
-                "dateReference": [
-                  {
-                    "dateReferenceQualifier": "2",
-                    "date": "12-12-12",
-                    "dateTimeFormatQualifier": "102"
-                  }
                 ],
-                "lineNumber": "12"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
+                "dateTimeType": [
+                    {
+                        "dateTimeQualifier": "137",
+                        "date": "202502130000",
+                        "dateTimeFormatQualifier": "203"
+                    }
+                ],
+                "headerFreeText": [
+                    {
+                        "textQualifier": "PUR",
+                        "freeText1": "CANALPRUEBA",
+                        "freeText2": "OBSERVACIONES DE PRUEBAS"
+                    }
+                ],
+                "party": [
+                    {
+                        "partyQualifier": "BY",
+                        "partyIdentifier": "1007808389"
+                    },
+                    {
+                        "partyQualifier": "ST",
+                        "partyIdentifier": "MOSCOSO"
+                    },
+                    {
+                        "partyQualifier": "SU",
+                        "partyIdentifier": "1022000115"
+                    },
+                    {
+                        "partyQualifier": "DP",
+                        "partyIdentifier": "SUCURSALPRUEBA"
+                    }
+                ]
+            },
+            "detailsItem": [
+                {
+                    "lineItemNumber": "1",
+                    "itemNumber": "7501065064189",
+                    "itemNumberType": "EN",
+                    "additionalProductId": [
+                        {
+                            "productIdFunction": "1",
+                            "additionalItemType": "AT",
+                            "additionalItemNumber": "60000000108099"
+                        }
+                    ],
+                    "itemDescription": [
+                        {
+                            "itemDescription": "SENSODYNE LIMPIEZA PROFUNDA"
+                        }
+                    ],
+                    "quantityDetails": [
+                        {
+                            "quantityQualifier": "21",
+                            "quantity": "180"
+                        }
+                    ],
+                    "monetaryAmountDetails": [
+                        {
+                            "monetaryAmountQualifier": "203",
+                            "monetaryAmount": "12664"
+                        }
+                    ],
+                    "priceDetails": [
+                        {
+                            "priceQualifier": "AAA",
+                            "price": "70.36"
+                        },
+                        {
+                            "priceQualifier": "AAF",
+                            "price": "850"
+                        }
+                    ],
+                    "packageDetails": [
+                        {
+                            "numberPackages": "12"
+                        }
+                    ]
+                },
+                {
+                    "lineItemNumber": "2",
+                    "itemNumber": "310158081111",
+                    "itemNumberType": "EN",
+                    "additionalProductId": [
+                        {
+                            "productIdFunction": "1",
+                            "additionalItemType": "AT",
+                            "additionalItemNumber": "60000000129552"
+                        }
+                    ],
+                    "itemDescription": [
+                        {
+                            "itemDescription": "SENSODYNE MENTA"
+                        }
+                    ],
+                    "quantityDetails": [
+                        {
+                            "quantityQualifier": "21",
+                            "quantity": "60"
+                        }
+                    ],
+                    "monetaryAmountDetails": [
+                        {
+                            "monetaryAmountQualifier": "203",
+                            "monetaryAmount": "4221"
+                        }
+                    ],
+                    "priceDetails": [
+                        {
+                            "priceQualifier": "AAA",
+                            "price": "70.36"
+                        },
+                        {
+                            "priceQualifier": "AAF",
+                            "price": "850"
+                        }
+                    ],
+                    "packageDetails": [
+                        {
+                            "numberPackages": "12"
+                        }
+                    ]
+                },
+                {
+                    "lineItemNumber": "3",
+                    "itemNumber": "310158077046",
+                    "itemNumberType": "EN",
+                    "additionalProductId": [
+                        {
+                            "productIdFunction": "1",
+                            "additionalItemType": "AT",
+                            "additionalItemNumber": "60000000125328"
+                        }
+                    ],
+                    "itemDescription": [
+                        {
+                            "itemDescription": "SENSODYNE ORIGINAL"
+                        }
+                    ],
+                    "quantityDetails": [
+                        {
+                            "quantityQualifier": "21",
+                            "quantity": "360"
+                        }
+                    ],
+                    "monetaryAmountDetails": [
+                        {
+                            "monetaryAmountQualifier": "203",
+                            "monetaryAmount": "25329"
+                        }
+                    ],
+                    "priceDetails": [
+                        {
+                            "priceQualifier": "AAA",
+                            "price": "70.36"
+                        },
+                        {
+                            "priceQualifier": "AAF",
+                            "price": "850"
+                        }
+                    ],
+                    "packageDetails": [
+                        {
+                            "numberPackages": "12"
+                        }
+                    ]
+                },
+                {
+                    "lineItemNumber": "4",
+                    "itemNumber": "310158085041",
+                    "itemNumberType": "EN",
+                    "additionalProductId": [
+                        {
+                            "productIdFunction": "1",
+                            "additionalItemType": "AT",
+                            "additionalItemNumber": "60000000125329"
+                        }
+                    ],
+                    "itemDescription": [
+                        {
+                            "itemDescription": "SENSODYNE ORIGINAL"
+                        }
+                    ],
+                    "quantityDetails": [
+                        {
+                            "quantityQualifier": "21",
+                            "quantity": "240"
+                        }
+                    ],
+                    "monetaryAmountDetails": [
+                        {
+                            "monetaryAmountQualifier": "203",
+                            "monetaryAmount": "16886"
+                        }
+                    ],
+                    "priceDetails": [
+                        {
+                            "priceQualifier": "AAA",
+                            "price": "70.36"
+                        },
+                        {
+                            "priceQualifier": "AAF",
+                            "price": "850"
+                        }
+                    ],
+                    "packageDetails": [
+                        {
+                            "numberPackages": "12"
+                        }
+                    ]
+                },
+                {
+                    "lineItemNumber": "5",
+                    "itemNumber": "7501065060891",
+                    "itemNumberType": "EN",
+                    "additionalProductId": [
+                        {
+                            "productIdFunction": "1",
+                            "additionalItemType": "AT",
+                            "additionalItemNumber": "60000000125329"
+                        }
+                    ],
+                    "itemDescription": [
+                        {
+                            "itemDescription": "SENSODYNE ORIGINAL"
+                        }
+                    ],
+                    "quantityDetails": [
+                        {
+                            "quantityQualifier": "21",
+                            "quantity": "5000"
+                        }
+                    ],
+                    "monetaryAmountDetails": [
+                        {
+                            "monetaryAmountQualifier": "203",
+                            "monetaryAmount": "200750"
+                        }
+                    ],
+                    "priceDetails": [
+                        {
+                            "priceQualifier": "AAA",
+                            "price": "40.15"
+                        },
+                        {
+                            "priceQualifier": "AAF",
+                            "price": "480"
+                        }
+                    ],
+                    "packageDetails": [
+                        {
+                            "numberPackages": "12"
+                        }
+                    ]
+                },
+                {
+                    "lineItemNumber": "6",
+                    "itemNumber": "7501108767527",
+                    "itemNumberType": "EN",
+                    "additionalProductId": [
+                        {
+                            "productIdFunction": "1",
+                            "additionalItemType": "AT",
+                            "additionalItemNumber": "60000000125329"
+                        }
+                    ],
+                    "itemDescription": [
+                        {
+                            "itemDescription": "SENSODYNE ORIGINAL"
+                        }
+                    ],
+                    "quantityDetails": [
+                        {
+                            "quantityQualifier": "21",
+                            "quantity": "110"
+                        }
+                    ],
+                    "monetaryAmountDetails": [
+                        {
+                            "monetaryAmountQualifier": "203",
+                            "monetaryAmount": "8542"
+                        }
+                    ],
+                    "priceDetails": [
+                        {
+                            "priceQualifier": "AAA",
+                            "price": "77.66"
+                        },
+                        {
+                            "priceQualifier": "AAF",
+                            "price": "923"
+                        }
+                    ],
+                    "packageDetails": [
+                        {
+                            "numberPackages": "12"
+                        }
+                    ]
+                },
+                {
+                    "lineItemNumber": "7",
+                    "itemNumber": "7451079003523",
+                    "itemNumberType": "EN",
+                    "additionalProductId": [
+                        {
+                            "productIdFunction": "1",
+                            "additionalItemType": "AT",
+                            "additionalItemNumber": "60000000123226"
+                        }
+                    ],
+                    "itemDescription": [
+                        {
+                            "itemDescription": "SENSODYNE ORIGINAL"
+                        }
+                    ],
+                    "quantityDetails": [
+                        {
+                            "quantityQualifier": "21",
+                            "quantity": "300"
+                        }
+                    ],
+                    "monetaryAmountDetails": [
+                        {
+                            "monetaryAmountQualifier": "203",
+                            "monetaryAmount": "14916"
+                        }
+                    ],
+                    "priceDetails": [
+                        {
+                            "priceQualifier": "AAA",
+                            "price": "49.72"
+                        },
+                        {
+                            "priceQualifier": "AAF",
+                            "price": "593"
+                        }
+                    ],
+                    "packageDetails": [
+                        {
+                            "numberPackages": "12"
+                        }
+                    ]
+                }
+            ],
+            "summary": {
+                "sectionControl": {
+                    "sectionIdentification": "S"
+                },
+                "monetaryAmountSummary": [
+                    {
+                        "monetaryAmountQualifierSummary": "204",
+                        "monetaryAmount": "289520"
+                    }
+                ],
+                "controlTotal": [
+                    {
+                        "controlQualifier": "2",
+                        "controlValue": "6292"
+                    }
+                ]
+            }
+        }
+    ]
 }
