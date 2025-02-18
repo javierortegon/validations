@@ -9,9 +9,7 @@
         "syntaxIdentifier",
         "syntaxVersionNumber",
         "senderIdentification",
-        "partnerIdentificationCodeQualifier",
         "recipientIdentification",
-        "recipientIdentificationCodeQualifier",
         "recipientIdentificationCodeCountry",
         "date",
         "time",
@@ -95,7 +93,7 @@
         },
         "interchangeControlReference": {
           "type": "string",
-          "pattern": "^[a-zA-Z0-9]*$",
+          "pattern": "^[a-zA-Z0-9_]*$",
           "minLength": 1,
           "maxLength": 14,
           "description": "UNB_20"
@@ -266,11 +264,6 @@
                   "type": "array",
                   "items": {
                     "type": "object",
-                    "required": [
-                      "additionalItemNumber",
-                      "additionalItemType",
-                      "productIdFunction"
-                    ],
                     "properties": {
                       "additionalItemNumber": {
                         "type": "string",
@@ -466,7 +459,7 @@
                         "pattern": "^[a-zA-Z0-9]*$",
                         "description": "ALC_1227"
                       },
-                      "codeLlistCoded": {
+                      "codeListCoded": {
                         "type": "string",
                         "maxLength": 3,
                         "enum": [
@@ -596,10 +589,7 @@
                               ]
                             },
                             "monetaryAmountPercentaje": {
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1E+15,
-                              "multipleOf": 0.001,
+                              "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                               "description": "MOA_C516_5004"
                             }
                           },
@@ -632,10 +622,7 @@
                               ]
                             },
                             "percentageValueDetailsAllowance": {
-                              "type": "number",
-                              "minimum": 0,
-                              "maximum": 1E+15,
-                              "multipleOf": 1E-05,
+                              "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                               "description": "PCD_C501_5482"
                             },
                             "rangeAllowance": {
@@ -726,10 +713,7 @@
                           }
                         }
                       }
-                    },
-                    "required": [
-                      "allowanceOrChargeQualifier"
-                    ]
+                    }
                   }
                 },
                 "codeList": {
@@ -1119,7 +1103,7 @@
                       },
                       "dutyTaxFeeRate": {
                         "type": "string",
-                        "pattern": "^[a-zA-Z0-9]*$",
+                        "pattern": "^[a-zA-Z0-9.]*$",
                         "maxLength": 17,
                         "description": "TAX_C243_5278"
                       },
@@ -1138,36 +1122,35 @@
                         ]
                       },
                       "monetaryAmountTax": {
-                        "type": "object",
-                        "required": [
-                          "dutyMonetaryAmountQualifier",
-                          "dutyMonetaryAmount",
-                          "currencyCoded"
-                        ],
-                        "properties": {
-                          "currencyCoded": {
-                            "type": "string",
-                            "pattern": "^[a-zA-Z0-9]*$",
-                            "maxLength": 3,
-                            "description": "MOA_C516_6345"
-                          },
-                          "dutyMonetaryAmount": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1E+15,
-                            "multipleOf": 0.001,
-                            "description": "MOA_C516_5004"
-                          },
-                          "dutyMonetaryAmountQualifier": {
-                            "type": "string",
-                            "pattern": "^[a-zA-Z0-9]*$",
-                            "maxLength": 3,
-                            "description": "MOA_C516_5025",
-                            "enum": [
-                              "124",
-                              "125",
-                              "150"
-                            ]
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "dutyMonetaryAmountQualifier",
+                            "dutyMonetaryAmount"
+                          ],
+                          "properties": {
+                            "currencyCoded": {
+                              "type": "string",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3,
+                              "description": "MOA_C516_6345"
+                            },
+                            "dutyMonetaryAmount": {
+                              "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
+                              "description": "MOA_C516_5004"
+                            },
+                            "dutyMonetaryAmountQualifier": {
+                              "type": "string",
+                              "pattern": "^[a-zA-Z0-9]*$",
+                              "maxLength": 3,
+                              "description": "MOA_C516_5025",
+                              "enum": [
+                                "124",
+                                "125",
+                                "150"
+                              ]
+                            }
                           }
                         }
                       }
@@ -1351,8 +1334,6 @@
                   "items": {
                     "type": "object",
                     "required": [
-                      "codeList1",
-                      "itemDescriptionId",
                       "itemDescription"
                     ],
                     "properties": {
@@ -1467,8 +1448,7 @@
                   "description": "LIN_C212_1082"
                 },
                 "lineItemNumber": {
-                  "type": "number",
-                  "maximum": 999999,
+                  "pattern": "^[1-9]\\d{0,5}$|^0$",
                   "description": "LIN_1082"
                 },
                 "monetaryAmountDetails": {
@@ -1574,10 +1554,7 @@
                         ]
                       },
                       "monetaryAmount": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 1E+15,
-                        "multipleOf": 0.001,
+                        "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                         "description": "MOA_C516_5004"
                       },
                       "monetaryAmountQualifier": {
@@ -1622,7 +1599,7 @@
                         "pattern": "^[a-zA-Z0-9]*$",
                         "maxLength": 17
                       },
-                      "codeLlistAgency": {
+                      "codeListAgency": {
                         "type": "string",
                         "description": "PAC_C202_3055",
                         "pattern": "^[a-zA-Z0-9]*$",
@@ -1787,8 +1764,7 @@
                         }
                       },
                       "numberPackages": {
-                        "type": "number",
-                        "maximum": 99999999,
+                        "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                         "description": "PAC_7224"
                       },
                       "packageIdentification": {
@@ -2277,6 +2253,9 @@
                         "pattern": "^[a-zA-Z0-9]*$",
                         "maxLength": 3,
                         "enum": [
+                          "BY",
+                          "SU",
+                          "DP",
                           "BT",
                           "CA",
                           "CB",
@@ -2610,10 +2589,7 @@
                         }
                       },
                       "price": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 999999999999.99988,
-                        "multipleOf": 0.0001,
+                        "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                         "description": "PRI_C509_5118"
                       },
                       "priceQualifier": {
@@ -2699,10 +2675,7 @@
                     ],
                     "properties": {
                       "quantity": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 999999999999.999,
-                        "multipleOf": 0.001,
+                        "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                         "description": "QTY_C186_6060"
                       },
                       "quantityQualifier": {
@@ -3187,9 +3160,6 @@
                         "type": "array",
                         "items": {
                           "type": "object",
-                          "required": [
-                            "referenceQualifier"
-                          ],
                           "properties": {
                             "referenceNumber": {
                               "type": "string",
@@ -3252,7 +3222,10 @@
                                 "ZZZ"
                               ]
                             }
-                          }
+                          },
+                          "required": [
+                            "referenceQualifier"
+                          ]
                         }
                       },
                       "schedulingFreeText": {
@@ -3440,10 +3413,7 @@
                       ]
                     },
                     "controlValue": {
-                      "type": "number",
-                      "minimum": 0,
-                      "maximum": 1E+35,
-                      "multipleOf": 1E-05,
+                      "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                       "description": "CNT_C270_6066"
                     },
                     "measureUnitControl": {
@@ -3462,11 +3432,7 @@
                       ]
                     }
                   },
-                  "required": [
-                    "controlQualifier",
-                    "controlValue",
-                    "measureUnitControl"
-                  ]
+                  "required": []
                 }
               },
               "monetaryAmountSummary": {
@@ -3569,10 +3535,7 @@
                       ]
                     },
                     "monetaryAmount": {
-                      "type": "number",
-                      "minimum": 0,
-                      "maximum": 1E+35,
-                      "multipleOf": 1E-05,
+                      "pattern": "^\\d{1,15}(\\.\\d{1,5})?$",
                       "description": "MOA_C516_5004"
                     },
                     "monetaryAmountQualifierSummary": {
@@ -3622,18 +3585,12 @@
                   },
                   "required": [
                     "monetaryAmountQualifierSummary",
-                    "monetaryAmount",
-                    "currencySummary"
+                    "monetaryAmount"
                   ]
                 }
               }
             },
-            "required": [
-              "sectionControl",
-              "messageTrailer",
-              "allowanceOrChargeSummary",
-              "controlTotal"
-            ]
+            "required": []
           },
           "header": {
             "type": "object",
@@ -4299,6 +4256,9 @@
                       "maxLength": 3,
                       "minLength": 1,
                       "enum": [
+                        "BY",
+                        "SU",
+                        "DP",
                         "SN",
                         "SG",
                         "IV",
