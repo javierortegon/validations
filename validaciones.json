@@ -5,6 +5,7 @@
   "type": "object",
   "properties": {
     "interchangeHeader": {
+      "description": "interchangeHeader_test",
       "required": [
         "syntaxIdentifier",
         "syntaxVersionNumber",
@@ -121,6 +122,7 @@
       }
     },
     "interchangeTrailer": {
+      "description": "interchangeTrailer_test",
       "required": [
         "interchangeControl",
         "interchangeReference"
@@ -141,13 +143,13 @@
     },
     "orders": {
       "type": "array",
-      "description": "LIN_TEST",
+      "description": "orders_test",
       "items": {
         "type": "object",
         "properties": {
           "detailsItem": {
             "type": "array",
-            "description": "LIN_TEST",
+            "description": "detailsItem_test",
             "items": {
               "type": "object",
               "required": [
@@ -262,7 +264,7 @@
                 },
                 "additionalProductId": {
                   "type": "array",
-                  "description": "PIA_TEST",
+                  "description": "additionalProductId_test",
                   "items": {
                     "type": "object",
                     "properties": {
@@ -397,7 +399,7 @@
                 },
                 "allowanceOrChargeDetails": {
                   "type": "array",
-                  "description": "ALC_TEST",
+                  "description": "allowanceOrChargeDetails_test",
                   "items": {
                     "type": "object",
                     "properties": {
@@ -512,7 +514,7 @@
                       },
                       "detailsItemQuantityAllowance": {
                         "type": "array",
-                        "description": "QTY_TEST",
+                        "description": "detailsItemQuantityAllowance_test",
                         "items": {
                           "type": "object",
                           "properties": {
@@ -570,7 +572,7 @@
                       },
                       "detailsMonetaryAllowance": {
                         "type": "array",
-                        "description": "MOA_TEST",
+                        "description": "detailsMonetaryAllowance_test",
                         "minItems": 1,
                         "items": {
                           "type": "object",
@@ -603,7 +605,7 @@
                       },
                       "detailsPercentageAllowance": {
                         "type": "array",
-                        "description": "PCD_TEST",
+                        "description": "detailsPercentageAllowance_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -630,7 +632,7 @@
                             },
                             "rangeAllowance": {
                               "type": "array",
-                              "description": "RNG_TEST",
+                              "description": "rangeAllowance_test",
                               "items": {
                                 "type": "object",
                                 "required": [
@@ -687,7 +689,7 @@
                       },
                       "rateDetails": {
                         "type": "array",
-                        "description": "RTE_TEST",
+                        "description": "rateDetails_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -743,7 +745,7 @@
                 },
                 "dateTimePeriod": {
                   "type": "array",
-                  "description": "DTM_TEST",
+                  "description": "dateTimePeriod_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -796,7 +798,7 @@
                 },
                 "detailsItemAdditionalInformation": {
                   "type": "array",
-                  "description": "ALI_TEST",
+                  "description": "detailsItemAdditionalInformation_test",
                   "items": {
                     "type": "object",
                     "properties": {
@@ -850,7 +852,7 @@
                 },
                 "detailsItemLocationIdentification": {
                   "type": "array",
-                  "description": "LOC_TEST",
+                  "description": "detailsItemLocationIdentification_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -901,7 +903,7 @@
                       },
                       "quantityLocation": {
                         "type": "object",
-                        "description": "QTY_TEST",
+                        "description": "quantityLocation_test",
                         "required": [
                           "locationQuantity",
                           "locationQuantityQualifier",
@@ -941,7 +943,7 @@
                       },
                       "locationDate": {
                         "type": "array",
-                        "description": "DTM_TEST",
+                        "description": "locationDate_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -993,7 +995,7 @@
                 },
                 "detailsItemMeasurements": {
                   "type": "array",
-                  "description": "MEA_TEST",
+                  "description": "detailsItemMeasurements_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -1072,7 +1074,7 @@
                 },
                 "dutyTaxFeeDetails": {
                   "type": "array",
-                  "description": "TAX_TEST",
+                  "description": "dutyTaxFeeDetails_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -1123,7 +1125,7 @@
                       },
                       "monetaryAmountTax": {
                         "type": "array",
-                        "description": "MOA_TEST",
+                        "description": "monetaryAmountTax_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -1161,7 +1163,7 @@
                 },
                 "freeText": {
                   "type": "array",
-                  "description": "FTX_TEST",
+                  "description": "freeText_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -1252,7 +1254,7 @@
                 },
                 "goodsIdentityNumber": {
                   "type": "array",
-                  "description": "GIN_TEST",
+                  "description": "goodsIdentityNumber_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -1335,7 +1337,7 @@
                 },
                 "itemDescription": {
                   "type": "array",
-                  "description": "IMD_TEST",
+                  "description": "itemDescription_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -1458,7 +1460,7 @@
                 },
                 "monetaryAmountDetails": {
                   "type": "array",
-                  "description": "MOA_TEST",
+                  "description": "monetaryAmountDetails_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -1596,7 +1598,7 @@
                 },
                 "packageDetails": {
                   "type": "array",
-                  "description": "PAC_TEST",
+                  "description": "packageDetails_test",
                   "items": {
                     "type": "object",
                     "properties": {
@@ -1739,7 +1741,7 @@
                       },
                       "measurementPackage": {
                         "type": "object",
-                        "description": "MEA_TEST",
+                        "description": "measurementPackage_test",
                         "required": [
                           "measurementApplication",
                           "measureUnitQualifier"
@@ -1775,7 +1777,7 @@
                       },
                       "packageIdentification": {
                         "type": "array",
-                        "description": "PCI_TEST",
+                        "description": "packageIdentification_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -1895,7 +1897,7 @@
                       },
                       "quantityPack": {
                         "type": "array",
-                        "description": "QTY_TEST",
+                        "description": "quantityPack_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -2148,7 +2150,7 @@
                 },
                 "partyDetails": {
                   "type": "array",
-                  "description": "NAD_TEST",
+                  "description": "partyDetails_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -2189,7 +2191,7 @@
                       },
                       "locationParty": {
                         "type": "array",
-                        "description": "LOC_TEST",
+                        "description": "locationParty_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -2320,7 +2322,7 @@
                 },
                 "percentageDetails": {
                   "type": "array",
-                  "description": "PCD_TEST",
+                  "description": "percentageDetails_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -2350,7 +2352,7 @@
                 },
                 "priceDetails": {
                   "type": "array",
-                  "description": "CUX_TEST",
+                  "description": "priceDetails_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -2360,7 +2362,7 @@
                     "properties": {
                       "currencyPrice": {
                         "type": "object",
-                        "description": "CUX_TEST",
+                        "description": "currencyPrice_test",
                         "required": [
                           "currencyCoded2"
                         ],
@@ -2676,7 +2678,7 @@
                 },
                 "quantityDetails": {
                   "type": "array",
-                  "description": "QTY_TEST",
+                  "description": "quantityDetails_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -2806,7 +2808,7 @@
                 },
                 "quantityVariances": {
                   "type": "array",
-                  "description": "QVR_TEST",
+                  "description": "quantityVariances_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -2839,13 +2841,13 @@
                 },
                 "referenceDetails": {
                   "type": "array",
-                  "description": "DTM_TEST",
+                  "description": "referenceDetails_test",
                   "items": {
                     "type": "object",
                     "properties": {
                       "dateTimeReference": {
                         "type": "array",
-                        "description": "DTM_TEST",
+                        "description": "dateTimeReference_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -2953,7 +2955,7 @@
                 },
                 "relatedIdentification": {
                   "type": "array",
-                  "description": "GIN_TEST",
+                  "description": "relatedIdentification_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -2993,7 +2995,7 @@
                 },
                 "schedulingConditions": {
                   "type": "array",
-                  "description": "SCC_TEST",
+                  "description": "schedulingConditions_test",
                   "items": {
                     "type": "object",
                     "required": [
@@ -3012,13 +3014,13 @@
                       },
                       "quantityScheduling": {
                         "type": "array",
-                        "description": "QTY_TEST",
+                        "description": "quantityScheduling_test",
                         "items": {
                           "type": "object",
                           "properties": {
                             "dateScheduling": {
                               "type": "object",
-                              "description": "QTY_TEST",
+                              "description": "dateScheduling_test",
                               "required": [
                                 "dateTimeFormatQualifier",
                                 "deliveryDateQualifier"
@@ -3173,6 +3175,7 @@
                       },
                       "referenceScheduling": {
                         "type": "array",
+                        "description": "referenceScheduling_test",
                         "items": {
                           "type": "object",
                           "properties": {
@@ -3245,6 +3248,7 @@
                       },
                       "schedulingFreeText": {
                         "type": "array",
+                        "description": "schedulingFreeText_test",
                         "items": {
                           "type": "object",
                           "required": [
@@ -3300,9 +3304,11 @@
           },
           "summary": {
             "type": "object",
+            "description": "summary_test",
             "properties": {
               "sectionControl": {
                 "type": "object",
+                "description": "sectionControl_test",
                 "properties": {
                   "sectionIdentification": {
                     "description": "UNS_81",
@@ -3318,6 +3324,7 @@
               },
               "messageTrailer": {
                 "type": "object",
+                "description": "messageTrailer_test",
                 "properties": {
                   "messageReference": {
                     "description": "UNT_62",
@@ -3339,6 +3346,7 @@
               },
               "allowanceOrChargeSummary": {
                 "type": "array",
+                "description": "allowanceOrChargeSummary_test",
                 "items": {
                   "type": "object",
                   "properties": {
@@ -3357,6 +3365,7 @@
                     },
                     "monetaryAllowanceSummary": {
                       "type": "array",
+                      "description": "monetaryAllowanceSummary_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -3399,6 +3408,7 @@
               },
               "controlTotal": {
                 "type": "array",
+                "description": "controlTotal_test",
                 "items": {
                   "type": "object",
                   "properties": {
@@ -3449,6 +3459,7 @@
               },
               "monetaryAmountSummary": {
                 "type": "array",
+                "description": "monetaryAmountSummary_test",
                 "items": {
                   "type": "object",
                   "properties": {
@@ -3606,14 +3617,17 @@
           },
           "header": {
             "type": "object",
+            "description": "header_test",
             "properties": {
               "termsOfDelivery": {
                 "type": "array",
+                "description": "termsOfDelivery_test",
                 "items": {
                   "type": "object",
                   "properties": {
                     "locationTerms": {
                       "type": "array",
+                      "description": "locationTerms_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -3747,6 +3761,7 @@
               },
               "requirementsConditions": {
                 "type": "array",
+                "description": "requirementsConditions_test",
                 "items": {
                   "type": "object",
                   "properties": {
@@ -3759,6 +3774,7 @@
                     },
                     "referenceRequirements": {
                       "type": "object",
+                      "description": "referenceRequirements_test",
                       "properties": {
                         "referenceQualifier": {
                           "type": "string",
@@ -3848,6 +3864,7 @@
               },
               "paymentTerms": {
                 "type": "array",
+                "description": "paymentTerms_test",
                 "items": {
                   "type": "object",
                   "properties": {
@@ -3946,6 +3963,7 @@
                     },
                     "dateTime": {
                       "type": "array",
+                      "description": "dateTime_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -4008,6 +4026,7 @@
                     },
                     "percentagePaymentTerms": {
                       "type": "array",
+                      "description": "percentagePaymentTerms_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -4058,6 +4077,7 @@
               },
               "paymentInstructions": {
                 "type": "array",
+                "description": "paymentInstructions_test",
                 "items": {
                   "type": "object",
                   "required": [
@@ -4124,6 +4144,7 @@
               },
               "messageHeader": {
                 "type": "object",
+                "description": "messageHeader_test",
                 "required": [
                   "messageReferenceNumber",
                   "messageTypeIdentifier",
@@ -4196,6 +4217,7 @@
               },
               "package": {
                 "type": "array",
+                "description": "package_test",
                 "items": {
                   "type": "object",
                   "properties": {
@@ -4220,6 +4242,7 @@
                     },
                     "packageMeasurements": {
                       "type": "array",
+                      "description": "packageMeasurements_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -4254,6 +4277,7 @@
               },
               "party": {
                 "type": "array",
+                "description": "party_test",
                 "items": {
                   "type": "object",
                   "required": [
@@ -4409,6 +4433,7 @@
                     },
                     "partyLocationIdentification": {
                       "type": "array",
+                      "description": "partyLocationIdentification_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -4457,6 +4482,7 @@
                     },
                     "partyReference": {
                       "type": "array",
+                      "description": "partyReference_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -4530,6 +4556,7 @@
                           },
                           "dateReference": {
                             "type": "array",
+                            "description": "dateReference_test",
                             "items": {
                               "type": "object",
                               "properties": {
@@ -4585,6 +4612,7 @@
                     },
                     "contactInformation": {
                       "type": "array",
+                      "description": "contactInformation_test",
                       "items": {
                         "type": "object",
                         "properties": {
@@ -4625,6 +4653,7 @@
                           },
                           "communicationContact": {
                             "type": "array",
+                            "description": "communicationContact_test",
                             "items": {
                               "type": "object",
                               "properties": {
