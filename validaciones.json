@@ -4902,7 +4902,211 @@
                         }
                     }
                 }
-            }
+            },
+            "dateTimeType": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "dateTimeQualifier",
+                      "date",
+                      "dateTimeFormatQualifier"
+                    ],
+                    "properties": {
+                      "dateTimeQualifier": {
+                        "type": "string",
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "minLength": 1,
+                        "maxLength": 3,
+                        "description": "DTM_C507_2005",
+                        "enum": [
+                          "63",
+                          "64",
+                          "2",
+                          "4",
+                          "10",
+                          "61",
+                          "62",
+                          "43E",
+                          "158",
+                          "69",
+                          "191",
+                          "76",
+                          "17",
+                          "46",
+                          "35",
+                          "153",
+                          "357",
+                          "47",
+                          "14",
+                          "9",
+                          "37",
+                          "38",
+                          "160",
+                          "11",
+                          "133",
+                          "15",
+                          "200",
+                          "235",
+                          "263",
+                          "273",
+                          "282",
+                          "383",
+                          "X14"
+                        ]
+                      },
+                      "date": {
+                        "type": "string",
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "minLength": 1,
+                        "maxLength": 35,
+                        "description": "DTM_C507_2380"
+                      },
+                      "dateTimeFormatQualifier": {
+                        "type": "string",
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "minLength": 1,
+                        "maxLength": 3,
+                        "description": "DTM_C507_2379",
+                        "enum": [
+                          "203",
+                          "109",
+                          "102",
+                          "718",
+                          "616"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "headerAdditionalInformation": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "countryOrigin": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "ALI_2329"
+                    },
+                    "typeRegime": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "ALI_9213"
+                    },
+                    "specialConditions1": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "ALI_4183",
+                      "enum": [
+                        "136",
+                        "137",
+                        "142",
+                        "143",
+                        "144",
+                        "73E"
+                      ]
+                    },
+                    "specialConditions2": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "ALI_4183"
+                    },
+                    "specialConditions3": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "ALI_4183"
+                    },
+                    "specialConditions4": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "ALI_4183"
+                    },
+                    "specialConditions5": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "ALI_4183"
+                    }
+                  }
+                }
+              },
+            "headerReference": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "referenceQualifier"
+                  ],
+                  "properties": {
+                    "referenceQualifier": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9]+$",
+                      "minLength": 1,
+                      "maxLength": 3,
+                      "description": "RFF_C506_1153"
+                    },
+                    "referenceNumber": {
+                      "description": "Número de la referencia",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "lineNumber": {
+                      "description": "Número de línea",
+                      "type": "string",
+                      "maxLength": 3
+                    },
+                    "referenceVersionNumber": {
+                      "description": "Número de versión de referencia",
+                      "type": "string",
+                      "maxLength": 35
+                    },
+                    "headerDateReference": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "dateReferenceQualifier": {
+                            "description": "Calificador de fecha / hora / periodo",
+                            "type": "string",
+                            "maxLength": 3
+                          },
+                          "date": {
+                            "description": "Fecha, hora",
+                            "type": "string",
+                            "maxLength": 35
+                          },
+                          "dateTimeFormatQualifier": {
+                            "description": "Formato de fecha / hora / periodo",
+                            "type": "string",
+                            "maxLength": 3
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "dutyTaxFee":{
+
+              },
+              "currency":{
+                
+              }
             }
           }
         },
