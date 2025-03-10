@@ -5254,12 +5254,136 @@
                                         }
                                     }
                                 }
+                            },
+                            "detailsOfTransport": {
+                                "type": "array",
+                                "description": "detailsOfTransport",
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "transportQualifier",
+                                        "modeOfTransport"
+                                    ],
+                                    "properties": {
+                                        "transportQualifier": {
+                                            "description": "TDT_8051",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "20"
+                                            ]
+                                        },
+                                        "transportReference": {
+                                            "description": "TDT_8028",
+                                            "type": "string",
+                                            "maxLength": 17
+                                        },
+                                        "modeOfTransport": {
+                                            "description": "TDT_C220_8067",
+                                            "type": "string",
+                                            "maxLength:": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "30"
+                                            ]
+                                        },
+
+                                        "transportIdentification": {
+                                            "description": "TDT_C228_8179",
+                                            "type": "string",
+                                            "maxLength": 8,
+                                            "enum": [
+                                                "31"
+                                            ]
+                                        },
+                                        "typeTransport": {
+                                            "description": "TDT_C228_8178",
+                                            "type": "string",
+                                            "maxLength": 17,
+                                            "minLength": 1
+                                        },
+                                        "carrierIdentification": {
+                                            "description": "TDT_C040_3127",
+                                            "type": "string",
+                                            "maxLength": 17,
+                                            "minLength": 1
+                                        },
+                                        "codeListAgencyCarrier": {
+                                            "description": "TDT_C040_3055",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": ["9"]
+                                        },
+                                        "carrierName": {
+                                            "description": "TDT_C040_3128",
+                                            "type": "string",
+                                            "maxLength": 35,
+                                            "minLength": 1
+                                        },
+                                        "meansTransportIdentification": {
+                                            "description": "TDT_C222_8213",
+                                            "type": "string",
+                                            "maxLength": 9,
+                                            "minLength": 1
+                                        },
+                                        "transportLocationIdentification":{
+                                            "type": "array",
+                                            "description": "transportLocationIdentification",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "locationQualifier": {
+                                                        "description": "LOC_3227",
+                                                        "type": "string",
+                                                        "minLength": 1,
+                                                        "maxLength": 3,
+                                                        "pattern": "^[a-zA-Z0-9]+$",
+                                                        "enum": [
+                                                            "1",
+                                                            "7",
+                                                            "18",
+                                                            "20",
+                                                            "27",
+                                                            "80",
+                                                            "83",
+                                                            "ZZZ"
+                                                        ]
+                                                    },
+                                                    "locIdentification": {
+                                                        "description": "LOC_C517_3225",
+                                                        "type": "string",
+                                                        "maxLength": 25
+                                                    },
+                                                    "codeLlistLocation": {
+                                                        "description": "LOC_C517_3055",
+                                                        "type": "string",
+                                                        "maxLength": 3,
+                                                        "enum": [
+                                                            "92",
+                                                            "86"
+                                                        ]
+                                                    },
+                                                    "location": {
+                                                        "description": "LOC_C517_3224",
+                                                        "type": "string",
+                                                        "maxLength": 256
+                                                    }
+                                                },
+                                                "required": [
+                                                    "locationQualifier"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
-                },
-                "required": []
-            }
+                }
+            },
+            "required": []
         }
     }
 }
