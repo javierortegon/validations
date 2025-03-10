@@ -5100,6 +5100,83 @@
                                       }
                                   }
                               }
+                          },
+                          "dutyTaxFee":{
+                            "type": "array",
+                              "items": {
+                                "type": "object",
+                                "required": [
+                                    "dutyTaxFeeFunction"
+                                ],
+                                "properties": {
+                                    "dutyTaxFeeFunction":{
+                                        "type": "string",
+                                        "enum": [
+                                            "7",
+                                            "5"
+                                        ],
+                                        "minLength": 1,
+                                        "description": "TAX_5283"
+                                    },
+                                    "dutyTaxFeeType": {
+                                        "type": "string",
+                                        "minLength": 3,
+                                        "maxLength": 3,
+                                        "description": "TAX_C241_5153",
+                                        "enum": [
+                                            "VAT",
+                                            "GST",
+                                            "OTH",
+                                            "ACT",
+                                            "TBT",
+                                            "IMP"
+                                        ]
+                                    },
+                                    "dutyTaxFeeRate": {
+                                        "type": "string",
+                                        "description": "TAX_C243_5278",
+                                        "maxLength": 17
+                                    },
+                                    "monetaryDuty":{
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "required": [
+                                                "monetaryAmountQualifier"
+                                            ],
+                                            "properties": {
+                                                "monetaryAmountQualifier": {
+                                                    "type": "string",
+                                                    "enum" : [
+                                                        "203",
+                                                        "66",
+                                                        "146",
+                                                        "AAB",
+                                                        "116",
+                                                        "56",
+                                                        "23",
+                                                        "79",
+                                                        "128",
+                                                        "64",
+                                                        "40",
+                                                        "388",
+                                                        "150",
+                                                        "1"
+                                                    ],
+                                                    "description": "MOA_C516_5025",
+                                                    "maxLength": 3,
+                                                    "minLength": 1
+                                                },
+                                                "monetaryAmountValue": {
+                                                    "type": "string",
+                                                    "description": "MOA_C516_5004",
+                                                    "pattern": "^\\d{1,15}(\\.\\d{1,3})?$"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                              }
                           }
                       }
                   }
