@@ -5288,7 +5288,6 @@
                                                 "30"
                                             ]
                                         },
-
                                         "transportIdentification": {
                                             "description": "TDT_C228_8179",
                                             "type": "string",
@@ -5314,7 +5313,9 @@
                                             "type": "string",
                                             "maxLength": 3,
                                             "minLength": 1,
-                                            "enum": ["9"]
+                                            "enum": [
+                                                "9"
+                                            ]
                                         },
                                         "carrierName": {
                                             "description": "TDT_C040_3128",
@@ -5328,7 +5329,7 @@
                                             "maxLength": 9,
                                             "minLength": 1
                                         },
-                                        "transportLocationIdentification":{
+                                        "transportLocationIdentification": {
                                             "type": "array",
                                             "description": "transportLocationIdentification",
                                             "items": {
