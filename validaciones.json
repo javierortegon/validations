@@ -5423,8 +5423,219 @@
                                         }
                                     }
                                 }
+                            },
+                            "allowanceOrCharge": {
+                                "type": "array",
+                                "description": "allowanceOrCharge",
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "allowanceOrChargeQualifier"
+                                    ],
+                                    "properties": {
+                                        "allowanceOrChargeQualifier": {
+                                            "description": "ALC_5463",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "A",
+                                                "C",
+                                                "H",
+                                                "N"
+                                            ]
+                                        },
+                                        "chargeNumber": {
+                                            "description": "ALC_C552_1230",
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "settlement": {
+                                            "description": "ALC_4471",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "1",
+                                                "2",
+                                                "3",
+                                                "4"
+                                            ]
+                                        },
+                                        "calculationSequenceIndicator": {
+                                            "description": "ALC_1227",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "1",
+                                                "2",
+                                                "9"
+                                            ]
+                                        },
+                                        "specialServicesCoded": {
+                                            "description": "ALC_C214_7161",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "EAB",
+                                                "VAB",
+                                                "TD",
+                                                "TAE",
+                                                "QD",
+                                                "PI",
+                                                "PAE",
+                                                "ADO",
+                                                "DDA",
+                                                "X40"
+                                            ]
+                                        },
+                                        "responsibleAgency": {
+                                            "description": "ALC_C214_3055",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "9"
+                                            ]
+                                        },
+                                        "specialServiceDescription": {
+                                            "description": "ALC_C214_7160",
+                                            "type": "string",
+                                            "maxLength": 35,
+                                            "minLength": 1
+                                        },
+                                        "specialServiceDescription2": {
+                                            "description": "ALC_C214_7160",
+                                            "type": "string",
+                                            "maxLength": 35,
+                                            "minLength": 1
+                                        },
+                                        "headerQuantityAllowance": {
+                                            "type": "array",
+                                            "description": "headerQuantityAllowance",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "allowanceQuantityQualifier": {
+                                                        "description": "QTY_C186_6063",
+                                                        "type": "string",
+                                                        "maxLength": 3,
+                                                        "minLength": 1
+                                                    },
+                                                    "allowanceQuantity": {
+                                                        "description": "QTY_C186_6060",
+                                                        "type": "string",
+                                                        "pattern": "^\\d{1,15}?$"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "allowanceQuantityQualifier",
+                                                    "allowanceQuantity"
+                                                ]
+                                            }
+                                        },
+                                        "headerPercentageAllowance": {
+                                            "type": "array",
+                                            "description": "headerPercentageAllowance",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "percentageQualifier": {
+                                                        "description": "PCD_C501_5245",
+                                                        "type": "string",
+                                                        "maxLength": 3,
+                                                        "minLength": 1,
+                                                        "enum": [
+                                                            "12",
+                                                            "7",
+                                                            "1",
+                                                            "2",
+                                                            "3"
+                                                        ]
+                                                    },
+                                                    "percentageValueAllowance": {
+                                                        "description": "PCD_C501_5482",
+                                                        "type": "string",
+                                                        "pattern": "^\\d{1,15}(\\.\\d{1,3})?$"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "percentageQualifier",
+                                                    "percentageValueAllowance"
+                                                ]
+                                            }
+                                        },
+                                        "allowanceMonetaryAllowance": {
+                                            "type": "array",
+                                            "description": "allowanceMonetaryAllowance",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "monetaryAmountQualifier": {
+                                                        "description": "MOA_C516_5025",
+                                                        "type": "string",
+                                                        "maxLength": 3,
+                                                        "minLength": 1,
+                                                        "enum": [
+                                                            "203",
+                                                            "66",
+                                                            "146",
+                                                            "AAB",
+                                                            "116",
+                                                            "56",
+                                                            "23",
+                                                            "79",
+                                                            "128",
+                                                            "64",
+                                                            "40",
+                                                            "388",
+                                                            "150",
+                                                            "1"
+                                                        ]
+                                                    },
+                                                    "monetaryAmountValue": {
+                                                        "description": "MOA_C516_5004",
+                                                        "type": "string",
+                                                        "pattern": "^\\d{1,15}(\\.\\d{1,3})?$"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "monetaryAmountQualifier",
+                                                    "monetaryAmountValue"
+                                                ]
+                                            }
+                                        },
+                                        "rateAllowance": {
+                                            "type": "array",
+                                            "description": "rateAllowance",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "rateTypeQualifier": {
+                                                        "description": "RTE_C128_5419",
+                                                        "type": "string",
+                                                        "maxLength:": 3,
+                                                        "enum": [
+                                                            1
+                                                        ]
+                                                    },
+                                                    "ratePerUnit": {
+                                                        "description": "RTE_C128_5420",
+                                                        "type": "string",
+                                                        "pattern": "^\\d{1,15}(\\.\\d{1,5})?$"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "rateTypeQualifier",
+                                                    "ratePerUnit"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
                             }
-
                         }
                     }
                 }
