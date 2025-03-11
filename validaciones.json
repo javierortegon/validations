@@ -5379,7 +5379,52 @@
                                         }
                                     }
                                 }
+                            },
+                            "equipmentDetails": {
+                                "type": "array",
+                                "description": "equipmentDetails",
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "equipmentQualifier"
+                                    ],
+                                    "properties": {
+                                        "equipmentQualifier": {
+                                            "description": "EQD_8053",
+                                            "type": "string",
+                                            "maxLength": 3,
+                                            "minLength": 1,
+                                            "enum": [
+                                                "1"
+                                            ]
+                                        },
+                                        "textEquipment": {
+                                            "type": "array",
+                                            "description": "textEquipment",
+                                            "items": {
+                                                "required": [
+                                                    "textQualifier"
+                                                ],
+                                                "type": "object",
+                                                "properties": {
+                                                    "textQualifier": {
+                                                        "description": "FTX_4451",
+                                                        "type": "string",
+                                                        "maxLength": 17,
+                                                        "minLength": 1
+                                                    },
+                                                    "freeText": {
+                                                        "description": "FTX_C108_4440",
+                                                        "type": "string",
+                                                        "maxLength": 512
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
+
                         }
                     }
                 }
