@@ -4143,14 +4143,7 @@
                             "messageHeader": {
                                 "type": "object",
                                 "description": "messageHeader",
-                                "required": [
-                                    "messageReferenceNumber",
-                                    "messageTypeIdentifier",
-                                    "messageTypeVersionNumber",
-                                    "messageTypeReleaseNumber",
-                                    "controllingAgency",
-                                    "associationAssignedCode"
-                                ],
+                                "required": [],
                                 "properties": {
                                     "messageReferenceNumber": {
                                         "type": "string",
@@ -5182,11 +5175,7 @@
                                 "description": "currency",
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "headerCurrencyUse1",
-                                        "headercurrencyCoded1",
-                                        "headercurrencyQualifier1"
-                                    ],
+                                    "required": [],
                                     "properties": {
                                         "headerCurrencyUse1": {
                                             "type": "string",
