@@ -4898,11 +4898,6 @@
                                 "type": "array",
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "dateTimeQualifier",
-                                        "date",
-                                        "dateTimeFormatQualifier"
-                                    ],
                                     "properties": {
                                         "dateTimeQualifier": {
                                             "type": "string",
@@ -5040,9 +5035,6 @@
                                 "type": "array",
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "referenceQualifier"
-                                    ],
                                     "properties": {
                                         "referenceQualifier": {
                                             "type": "string",
@@ -5097,9 +5089,6 @@
                                 "type": "array",
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "dutyTaxFeeFunction"
-                                    ],
                                     "properties": {
                                         "dutyTaxFeeFunction": {
                                             "type": "string",
@@ -5133,9 +5122,6 @@
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
-                                                "required": [
-                                                    "monetaryAmountQualifier"
-                                                ],
                                                 "properties": {
                                                     "monetaryAmountQualifier": {
                                                         "type": "string",
@@ -5248,10 +5234,6 @@
                                 "description": "detailsOfTransport",
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "transportQualifier",
-                                        "modeOfTransport"
-                                    ],
                                     "properties": {
                                         "transportQualifier": {
                                             "description": "TDT_8051",
@@ -5359,10 +5341,7 @@
                                                         "type": "string",
                                                         "maxLength": 256
                                                     }
-                                                },
-                                                "required": [
-                                                    "locationQualifier"
-                                                ]
+                                                }
                                             }
                                         }
                                     }
@@ -5373,9 +5352,6 @@
                                 "description": "equipmentDetails",
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "equipmentQualifier"
-                                    ],
                                     "properties": {
                                         "equipmentQualifier": {
                                             "description": "EQD_8053",
@@ -5390,9 +5366,6 @@
                                             "type": "array",
                                             "description": "textEquipment",
                                             "items": {
-                                                "required": [
-                                                    "textQualifier"
-                                                ],
                                                 "type": "object",
                                                 "properties": {
                                                     "textQualifier": {
@@ -5417,9 +5390,6 @@
                                 "description": "allowanceOrCharge",
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "allowanceOrChargeQualifier"
-                                    ],
                                     "properties": {
                                         "allowanceOrChargeQualifier": {
                                             "description": "ALC_5463",
@@ -5517,11 +5487,7 @@
                                                         "type": "string",
                                                         "pattern": "^\\d{1,15}?$"
                                                     }
-                                                },
-                                                "required": [
-                                                    "allowanceQuantityQualifier",
-                                                    "allowanceQuantity"
-                                                ]
+                                                }
                                             }
                                         },
                                         "headerPercentageAllowance": {
@@ -5548,11 +5514,7 @@
                                                         "type": "string",
                                                         "pattern": "^\\d{1,15}(\\.\\d{1,3})?$"
                                                     }
-                                                },
-                                                "required": [
-                                                    "percentageQualifier",
-                                                    "percentageValueAllowance"
-                                                ]
+                                                }
                                             }
                                         },
                                         "allowanceMonetaryAllowance": {
@@ -5588,11 +5550,7 @@
                                                         "type": "string",
                                                         "pattern": "^\\d{1,15}(\\.\\d{1,3})?$"
                                                     }
-                                                },
-                                                "required": [
-                                                    "monetaryAmountQualifier",
-                                                    "monetaryAmountValue"
-                                                ]
+                                                }
                                             }
                                         },
                                         "rateAllowance": {
@@ -5614,11 +5572,7 @@
                                                         "type": "string",
                                                         "pattern": "^\\d{1,15}(\\.\\d{1,5})?$"
                                                     }
-                                                },
-                                                "required": [
-                                                    "rateTypeQualifier",
-                                                    "ratePerUnit"
-                                                ]
+                                                }
                                             }
                                         }
                                     }
