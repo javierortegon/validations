@@ -4683,7 +4683,33 @@
                                             }
                                         }
                                     }
-                                }
+                                },
+                                "allOf": [
+                                    {
+                                        "contains": {
+                                            "type": "object",
+                                            "required": ["partyQualifier"],
+                                            "properties": {
+                                                "partyQualifier": {
+                                                    "type": "string",
+                                                    "enum": ["BY"]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "contains": {
+                                            "type": "object",
+                                            "required": ["partyQualifier"],
+                                            "properties": {
+                                                "partyQualifier": {
+                                                    "type": "string",
+                                                    "enum": ["SU"]
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
                             },
                             "headerFreeText": {
                                 "type": "array",
@@ -4962,6 +4988,16 @@
                                                 "718",
                                                 "616"
                                             ]
+                                        }
+                                    }
+                                },
+                                "contains": {
+                                    "type": "object",
+                                    "required": ["dateTimeQualifier"],
+                                    "properties": {
+                                        "dateTimeQualifier": {
+                                            "type": "string",
+                                            "enum": ["137"]
                                         }
                                     }
                                 }
@@ -5578,7 +5614,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "required": ["dateTimeType"]
                     }
                 }
             },
